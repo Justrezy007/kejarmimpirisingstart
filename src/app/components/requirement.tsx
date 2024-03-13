@@ -46,12 +46,12 @@ const Requirement = () => {
                     <li className='my-1'>Apabila kuota kompetisi offline dalam domisili tersebut telah habis, maka diperbolehkan untuk melakukan kompetisi secara online</li>
                 </ul>
                 <div className='mt-4 flex flex-row flex-wrap gap-5'>
-                    <button className="btn px-6 btn-primary" onClick={()=>setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
-                    <button className="btn text-primary" onClick={()=>setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
+                    <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={()=>setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
+                    <button className="btn text-red-700 rounded-none" onClick={()=>setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
                 </div>
             </div>
             <div className="flex order-1 items-center gap-2 lg:p-28">
-                <img src={'./Requirement.png'} className="w-80 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.5)]" alt="Tree" />
+                <img src={'./Requirement.png'} className="w-80 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" />
             </div>
         </div>
 

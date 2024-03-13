@@ -22,7 +22,7 @@ export default function Home() {
       <Map />
       <div className="bg-base-300 w-full flex flex-col justify-center items-center pt-6">
         <p className="text-center text-xl">Kuota Sudah Habis Atau Bukan Dari Kota Di Atas?</p>
-        <button className="btn bg-primary text-primary-content px-8 my-6 shadow-[0_10px_50px_rgba(8,_112,_184,_0.5)] hover:bg-primary/80 hover:shadow-none">Daftar Online Disini</button>
+        <button className="btn bg-red-700 rounded-none border-none px-8 my-6 shadow-[0_10px_50px_rgba(185,_28,_28,_0.5)] hover:bg-primary/80 hover:shadow-none">Daftar Online Disini</button>
       </div>
       <Timeline />
       <FAQ />

@@ -17,7 +17,7 @@ const Description = () => {
                 </p>
             </div>
             <div className="flex flex-1 items-center gap-2 lg:p-24">
-                <img src={'./Desc.png'} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.5)]" alt="Tree" />
+                <img src={'./Desc.png'} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)]" alt="Tree" />
             </div>
         </div>
 

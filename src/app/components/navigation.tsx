@@ -6,7 +6,7 @@ const Navigation = () => {
     const path = usePathname()
     if(path === '/')
     return (
-        <div className="navbar bg-base-300 bg-opacity-60 backdrop-blur fixed z-50">
+        <div className="navbar bg-base-300 bg-opacity-60 backdrop-blur fixed z-50 px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,19 +20,21 @@ const Navigation = () => {
                         <li className=''><a href='#faq'>FAQ</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">
+                    <img className='w-36 ' src={'/Logo.svg'} />
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-primary' href='#event'>Event</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-primary' href='#register'>Register</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-primary' href='#timeline'>Timeline</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-primary' href='#contact'>Contact</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-primary' href='#faq'>FAQ</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#event'>Event</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#register'>Register</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#timeline'>Timeline</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#contact'>Contact</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#faq'>FAQ</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-primary rounded-none px-8 uppercase text-primary-content hover:bg-primary/80">Register</a>
+                <a className="btn bg-red-700 text-white rounded-none px-10 uppercase border-none hover:bg-primary/80">Register</a>
             </div>
         </div>
     )
