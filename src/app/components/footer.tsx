@@ -6,7 +6,7 @@ const Footer = () => {
     const path = usePathname()
     if(path === '/')
     return (
-        <footer className="bg-base-300">
+        <footer id="contact" className="bg-base-300">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-neutral-content">
                 <a className="btn btn-ghost text-xl">

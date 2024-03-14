@@ -1,5 +1,12 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import {auth} from "@/app/firebase/config"
+import {useRouter} from 'next/navigation'
+import { signOut } from 'firebase/auth'
+import { getFirestore,doc } from 'firebase/firestore';
+import {useDocument} from 'react-firebase-hooks/firestore'
+import {app} from "@/app/firebase/config"
 
 const Profile = () => {
     const [editor, setEditor] = useState(false)
@@ -13,6 +20,45 @@ const Profile = () => {
     const [instagram, setInstagram] = useState('')
     const [city, setCity] = useState('')
     const [ktp, setKTP] = useState('')
+    const [type, setType] = useState('')
+
+    const [user] = useAuthState(auth)
+    const router = useRouter()
+
+    const userSession = sessionStorage.getItem('user')
+
+    const [userData, loadingUserData, errorUserData] = useDocument(
+        
+        userSession ? doc(getFirestore(app),'user', userSession):null,{
+            snapshotListenOptions: { includeMetadataChanges: true },
+        }
+    )
+
+    const handleSignOut = (e:any) =>{
+        e.preventDefault()
+        signOut(auth)
+        sessionStorage.removeItem('user')
+    }
+
+    useEffect(() =>{
+        if(!userSession){
+            router.push('/')
+        }
+        if(!loadingUserData){
+            console.log(userData?.data())
+            setFirstName(userData?.data()?.firstName)
+            setLastName(userData?.data()?.lastName)
+            setTempatTanggalLahir(userData?.data()?.tempatTanggalLahir)
+            setEmail(userData?.data()?.email)
+            setPhone(userData?.data()?.phone)
+            setInstagram(userData?.data()?.instagram)
+            setCity(userData?.data()?.city)
+            setKTP(userData?.data()?.ktp)
+            setType(userData?.data()?.type)
+        }
+    },[user, userSession, userData])
+    
+
     return (
         <div className="bg-white shadow-lg rounded-2xl w-full dark:bg-gray-800">
             {/* Pop Up Editor */}
@@ -21,7 +67,7 @@ const Profile = () => {
                 <form className='bg-base-100 w-7/12 h-full px-8 py-8 overflow-y-auto '>
                     <p className='font-semibold text-lg'>RISING START <br /> 2024.</p>
                     <h3 className='font-semibold text-2xl mt-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3>
-                    <h3 className='font-semibold text-lg mt-1 text-center text-white'>ONLINE REGISTRATION</h3>
+                    <h3 className='font-semibold text-lg mt-1 text-center text-white uppercase'>{type} REGISTRATION</h3>
                     <div className='px-12 mt-8'>
                         <div className='flex justify-between gap-5'>
                             <div className='flex flex-col mt-6'>
@@ -73,16 +119,16 @@ const Profile = () => {
                 </form>
             </div>
             : null}
-            <img alt="profil" src="/KV.jpg" className="w-full mb-4 object-cover rounded-t-lg h-80" />
+            <img alt="profil" src="/KV.png" className="w-full mb-4 object-cover rounded-t-lg h-80" />
             <div className="flex flex-col items-center justify-center p-4 -mt-24">
                 <div className="relative block">
                     <img alt="profil" src="/Hero.jpg" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white dark:border-gray-800" />
                 </div>
                 <p className="mt-2 text-xl font-medium text-gray-800 dark:text-white">
-                    Mark Hoppus
+                    {firstName + " " + lastName}
                 </p>
-                <p className="mb-4 text-xs text-gray-400">
-                    Online Participant
+                <p className="mb-4 text-xs text-gray-400 capitalize">
+                    {type} Participant
                 </p>
                 <div className="w-5/12 mx-auto p-2 mt-4 rounded-lg">
                     <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
@@ -90,19 +136,19 @@ const Profile = () => {
                             <p className="flex flex-col">
                                 Nama
                                 <span className="font-bold text-black dark:text-white">
-                                    Mark Hoppus
+                                    {firstName + " " + lastName}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 No. Telp
                                 <span className="font-bold text-black dark:text-white">
-                                    08987987989
+                                    {phone}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Instagram
                                 <span className="font-bold text-black dark:text-white">
-                                    @markhop
+                                    {instagram}
                                 </span>
                             </p>
                         </div>
@@ -110,25 +156,26 @@ const Profile = () => {
                             <p className="flex flex-col">
                                 Tempat, Tanggal Lahir
                                 <span className="font-bold text-black dark:text-white">
-                                    Jakarta, 3 Oktober 2002
+                                    {tempatTanggalLahir}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Email
                                 <span className="font-bold text-black dark:text-white">
-                                    markhop@gmail.com
+                                    {email}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Kota Asal
                                 <span className="font-bold text-black dark:text-white">
-                                    Jakarta
+                                    {city}
                                 </span>
                             </p>
                         </div>
                     </div>
-                    <div className='flex justify-end'>
+                    <div className='flex justify-center'>
                         <button onClick={e => setEditor(!editor)} className='px-8 py-1.5 bg-red-700 mt-8'>Ubah Data</button>     
+                        <button onClick={e=> handleSignOut(e)}className='text-red-700 px-8 py-2 mt-8'>Sign Out</button>
                     </div>
                 </div>
             </div>

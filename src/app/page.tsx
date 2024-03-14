@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BsWhatsapp } from "react-icons/bs";
 import Hero from "./components/hero";
 import Countdown from "./components/countdown";
 import Description from "./components/description";
@@ -10,6 +11,10 @@ import Timeline from "./components/timeline";
 export default function Home() {
   return (
     <main>
+      {/* Fixed Whatsapp */}
+      <a className="fixed z-30 bottom-7 shadow-lg cursor-pointer right-10 bg-base-100 w-16 h-16 flex justify-center items-center rounded-full">
+        <BsWhatsapp className="w-8 h-8" />
+      </a>
       <Hero />
       <Countdown />
       <Description />

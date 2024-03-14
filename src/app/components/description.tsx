@@ -3,7 +3,7 @@ import React from 'react'
 const Description = () => {
     return (
 
-        <div className="bg-base-100 w-10/12 mx-auto pt-28 overflow-hidden relative lg:flex lg:items-center">
+        <div id="event" className="bg-base-100 w-10/12 mx-auto pt-28 overflow-hidden relative lg:flex lg:items-center">
             <div className="flex-1 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
                 <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
                     <span className="block">

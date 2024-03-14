@@ -2,7 +2,7 @@ import React from 'react'
 
 const FAQ = () => {
     return (
-    <div className="w-full bg-base-200 mx-auto">
+    <div id="faq" className="w-full bg-base-200 mx-auto">
         <div className="w-10/12 py-12 mx-auto">
             <h2 className="mb-12 text-3xl font-extrabold leading-9 text-neutral-100 ">
                 FAQs

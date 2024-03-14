@@ -2,7 +2,10 @@ import React from 'react'
 
 const   Timeline = () => {
     return (
-        <ul className="timeline timeline-vertical pt-16">
+        <ul id="timeline" className="timeline timeline-vertical pt-16">
+            <h2 className="mb-12 px-32 text-3xl font-extrabold leading-9 text-neutral-100 ">
+                TIMELINE
+            </h2>
             <li>
                 <div className="timeline-end my-8">3 Mei - 8 Juli 24’</div>
                 <div className="timeline-middle">
