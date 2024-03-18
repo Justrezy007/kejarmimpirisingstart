@@ -1,12 +1,13 @@
 'use client'
 import React from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const Navigation = () => {
     const path = usePathname()
     if(path === '/')
     return (
-        <div className="navbar bg-base-300 bg-opacity-60 backdrop-blur fixed z-50 px-20">
+        <div className="navbar bg-base-300 bg-opacity-60 backdrop-blur fixed z-50 md:px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +22,7 @@ const Navigation = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">
-                    <img className='w-36 ' src={'/Logo.svg'} />
+                    <img className='md:w-36 w-28' src={'/Logo.svg'} />
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -34,7 +35,7 @@ const Navigation = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-red-700 text-white rounded-none px-10 uppercase border-none hover:bg-primary/80">Register</a>
+                <Link href="/login" className=" bg-red-700 text-white rounded-none py-2.5 text-sm px-6 uppercase border-none hover:bg-primary/80">Login</Link>
             </div>
         </div>
     )

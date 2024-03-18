@@ -1,38 +1,54 @@
 "use client"
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 const Requirement = () => {
     const [isModalOfflineOpen, setModalOfflineOpen] = useState(false);
     const [isModalOnlineOpen, setModalOnlineOpen] = useState(false);
     return (
-        <div className="bg-base-100 w-11/12 mx-auto overflow-hidden relative lg:flex lg:items-center">
+        <div className="bg-base-100 md:w-10/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
+
             {isModalOfflineOpen && (
-                <div className="modal" id="my_modal_1">
-                <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">Press ESC key or click the button below to close</p>
-                    <div className="modal-action">
-                    <button className="btn" onClick={()=>setModalOfflineOpen(!isModalOfflineOpen)}>
-                        Close
-                    </button>
+                <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
+                    <div className="modal-box px-10">
+                        <h3 className="font-bold text-lg">Ketentuan Skema Offline</h3>
+                        <ul className="list-disc">
+                            <li>Registrasikan diri peserta pada link registrasi cimb.id/RisingStart dan pilih sesuai domisili peserta</li>
+                            <li>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
+                            <li>Apabila kuota audisi offline penuh, peserta dapat mendaftarkan diri pada skema online</li>
+                            <li>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari dari bagian intro hingga reff di hari audisi  </li>
+                            <li>Datang ke tempat audisi 1 jam sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp konfirmasi  </li>
+                            <li>Lakukan registrasi ulang dan pengambilan nomor antrian audisi</li>
+                            <li>Tunggu hingga nomor pendaftaran audisi peserta dipanggil oleh panitia</li>
+                            <li>Waktu audisi akan berlangsung kurang lebih 5 menit, peserta dapat menggunakan instrumen musik dan atau diiringi dengan lagu Kejar Mimpimu - Dee Lestari (Minus One)</li>
+                        </ul>
+                        <div className="modal-action">
+                            <button className="btn" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>
+                                Close
+                            </button>
+                        </div>
                     </div>
-                </div>
                 </div>
             )}
             {isModalOnlineOpen && (
-                <div className="modal" id="my_modal_1">
-                <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">Press ESC key or click the button below to close</p>
-                    <div className="modal-action">
-                    <button className="btn" onClick={()=>setModalOnlineOpen(!isModalOfflineOpen)}>
-                        Close
-                    </button>
+                <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
+                    <div className="modal-box px-10">
+                        <h3 className="font-bold text-lg">Ketentuan Skema Online</h3>
+                        <ul className="list-disc">
+                            <li>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan </li>
+                            <li>Dalam pembuatan video, boleh menggunakan instrumen dan dilarang dalam menggunakan filter suara atau mixing</li>
+                            <li>Tampilan video memperlihatkan wajah secara keseluruhan</li>
+                            <li>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi talent. Gunakan Hashtag #CIMBNiagaRisingStart2024, tag @cimbniaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum</li>
+                            <li>Apabila video sudah dipublikasi, registrasikan diri peserta pada link registrasi online dan jangan lupa untuk melampirkan bukti upload sesuai dengan prosedur pada form.</li>
+                        </ul>
+                        <div className="modal-action">
+                            <button className="btn" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>
+                                Close
+                            </button>
+                        </div>
                     </div>
                 </div>
-                </div>
             )}
-            <div className="flex-1 order-2 py-12 px-4 sm:px-6 lg:py-20 lg:px-2 z-20">
+            <div className="flex-1  order-2 py-12 px-8 md:px-4 sm:px-6 lg:py-20 lg:px-2 z-20">
                 <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
                     <span className="block">Syarat & Ketentuan Peserta</span>
                 </h2>
@@ -46,11 +62,11 @@ const Requirement = () => {
                     <li className='my-1'>Apabila kuota kompetisi offline dalam domisili tersebut telah habis, maka diperbolehkan untuk melakukan kompetisi secara online</li>
                 </ul>
                 <div className='mt-4 flex flex-row flex-wrap gap-5'>
-                    <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={()=>setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
-                    <button className="btn text-red-700 rounded-none" onClick={()=>setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
+                    <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
+                    <button className="btn text-red-700 rounded-none" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
                 </div>
             </div>
-            <div className="flex order-1 items-center gap-2 lg:p-28">
+            <div className="flex justify-center order-1 items-center md:py-0 py-14 gap-2 lg:p-28">
                 <img src={'./Requirement.png'} className="w-80 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" />
             </div>
         </div>

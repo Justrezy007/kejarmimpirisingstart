@@ -13,7 +13,8 @@ const Profile = () => {
     const [checked, setChecked] = useState(false)
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
-    const [tempatTanggalLahir, setTempatTanggalLahir] = useState('')
+    const [tempatLahir, setTempatLahir] = useState('')
+    const [tanggalLahir, setTanggalLahir] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [phone, setPhone] = useState('')
@@ -25,7 +26,7 @@ const Profile = () => {
     const [user] = useAuthState(auth)
     const router = useRouter()
 
-    const userSession = sessionStorage.getItem('user')
+    const [userSession, setUserSession] = useState<string|null>('')
 
     const [userData, loadingUserData, errorUserData] = useDocument(
         
@@ -41,14 +42,18 @@ const Profile = () => {
     }
 
     useEffect(() =>{
-        if(!userSession){
+        const getSession = sessionStorage.getItem('user')
+        setUserSession(getSession)
+
+        if(!getSession){
             router.push('/')
         }
         if(!loadingUserData){
             console.log(userData?.data())
             setFirstName(userData?.data()?.firstName)
             setLastName(userData?.data()?.lastName)
-            setTempatTanggalLahir(userData?.data()?.tempatTanggalLahir)
+            setTempatLahir(userData?.data()?.tempatLahir)
+            setTanggalLahir(userData?.data()?.tanggalLahir)
             setEmail(userData?.data()?.email)
             setPhone(userData?.data()?.phone)
             setInstagram(userData?.data()?.instagram)
@@ -64,7 +69,7 @@ const Profile = () => {
             {/* Pop Up Editor */}
             {editor ? 
             <div className='fixed bg-black bg-opacity-80 w-full h-screen flex justify-center items-center z-50 y-16'>
-                <form className='bg-base-100 w-7/12 h-full px-8 py-8 overflow-y-auto '>
+                {/* <form className='bg-base-100 w-7/12 h-full px-8 py-8 overflow-y-auto '>
                     <p className='font-semibold text-lg'>RISING START <br /> 2024.</p>
                     <h3 className='font-semibold text-2xl mt-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3>
                     <h3 className='font-semibold text-lg mt-1 text-center text-white uppercase'>{type} REGISTRATION</h3>
@@ -116,13 +121,13 @@ const Profile = () => {
                         <button className='bg-red-700 px-8 py-2 mt-8'>Simpan Perubahan</button>
                         <button onClick={e => setEditor(!editor)} className='text-red-700 px-8 py-2 mt-8'>Kembali</button>
                     </div>
-                </form>
+                </form> */}
             </div>
             : null}
             <img alt="profil" src="/KV.png" className="w-full mb-4 object-cover rounded-t-lg h-80" />
             <div className="flex flex-col items-center justify-center p-4 -mt-24">
                 <div className="relative block">
-                    <img alt="profil" src="/Hero.jpg" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white dark:border-gray-800" />
+                    <img alt="profil" src="/avatar_boy.png" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white dark:border-gray-800" />
                 </div>
                 <p className="mt-2 text-xl font-medium text-gray-800 dark:text-white">
                     {firstName + " " + lastName}
@@ -130,7 +135,7 @@ const Profile = () => {
                 <p className="mb-4 text-xs text-gray-400 capitalize">
                     {type} Participant
                 </p>
-                <div className="w-5/12 mx-auto p-2 mt-4 rounded-lg">
+                <div className="md:w-5/12 w-full mx-auto p-2 mt-4 rounded-lg">
                     <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
                         <div>
                             <p className="flex flex-col">
@@ -156,7 +161,7 @@ const Profile = () => {
                             <p className="flex flex-col">
                                 Tempat, Tanggal Lahir
                                 <span className="font-bold text-black dark:text-white">
-                                    {tempatTanggalLahir}
+                                    {tempatLahir},{tanggalLahir}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
