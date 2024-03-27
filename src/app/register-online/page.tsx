@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { uploadFile, getFile } from '../utils/uploader'
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm, SubmitHandler } from "react-hook-form"
+import Loading from '../components/loading'
 
 interface FormRegistration {
     checked: boolean
@@ -30,6 +31,8 @@ const RegisterOnline = () => {
     const [ktp, setKTP] = useState('')
     const [errKtp, setErrKtp] = useState('')
     const [errorSignUp, setErrorSignUp] = useState('')
+
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const [userSession, setUserSession] = useState<string|null>('')
 
@@ -133,6 +136,7 @@ const RegisterOnline = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
         }} className="min-h-screen mx-auto overflow-y-hidden bg-fixed bg-cover bg-center bg-no-repeat shadow-lg">
+            {(isLoading || loadImage) && <Loading />}
             <div className="container flex items-center justify-center flex-1 h-full mx-auto py-8">
                 <form onSubmit={handleSubmit(onSubmit)} className='bg-base-100 w-11/12 md:w-7/12 px-8 py-8'>
                     <p className='font-semibold text-lg'>RISING START <br /> 2024.</p>
@@ -149,7 +153,7 @@ const RegisterOnline = () => {
                             <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="first-name">Nama Depan </label>
                                 {errors.firstName && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                                <input {...register("firstName",{required:true, minLength: 3, maxLength: 20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Nama Awal' />
+                                <input {...register("firstName",{required:true, minLength: 3, maxLength: 20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Nama Depan' />
                             </div>
                             <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="last-name">Nama Akhir</label>
@@ -161,12 +165,12 @@ const RegisterOnline = () => {
                             <div className='flex flex-col mt-6 flex-1'>
                             <label className='text-xs text-opacity-50' id="tempat-lahir">Tempat Lahir</label>
                             {errors.tempatLahir && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                            <input {...register("tempatLahir",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Jakarta, 3 Oktober 2000'  />
+                            <input {...register("tempatLahir",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Jakarta'  />
                             </div>
                             <div className='flex flex-col mt-6 flex-1'>
                             <label className='text-xs text-opacity-50' id="tanggal-lahir">Tanggal Lahir</label>
                             {errors.tanggalLahir && <p className='text-xs text-red-500'>Required</p>}
-                            <input {...register("tanggalLahir",{required:true})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='date' placeholder='Jakarta, 3 Oktober 2000'  />
+                            <input {...register("tanggalLahir",{required:true})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='date' placeholder='dd/mm/yy'  />
                             </div>
                         </div>
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
@@ -212,7 +216,7 @@ const RegisterOnline = () => {
                     <p className={`text-red-900 px-8 py-4 mx-auto md:w-7/12 bg-red-300 bg-opacity-80 text-center mt-5 text-sm ${errorSignUp == '' ? 'hidden': 'block'}`}>{errorSignUp}</p>
                     <div className='md:px-12 px-4 flex justify-end gap-5'>
                         <Link href={'/'} className='text-red-700 px-8 py-2 mt-8 btn'>Kembali</Link>
-                        <button type="submit" className='bg-red-700 px-8 py-2 mt-8'>Daftar</button>
+                        <button onClick={()=>setIsLoading(!isLoading)} type="submit" className='bg-red-700 px-8 py-2 mt-8'>Daftar</button>
                     </div>
                 </form>
             </div>
