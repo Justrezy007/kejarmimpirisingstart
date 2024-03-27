@@ -133,7 +133,7 @@ const RegisterOnline = () => {
     return (
         <div style={{
             backgroundImage: "url('./KV.png')",
-            backgroundRepeat: "no-repeat",
+            backgroundRepeat: "no-repeat", 
             backgroundSize: "cover",
         }} className="min-h-screen mx-auto overflow-y-hidden bg-fixed bg-cover bg-center bg-no-repeat shadow-lg">
             {(isLoading || loadImage) && <Loading />}
