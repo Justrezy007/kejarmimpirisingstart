@@ -21,8 +21,8 @@ const Navigation = () => {
                         <li className=''><a href='#faq'>FAQ</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">
-                    <img className='md:w-36 w-28' src={'/Logo.svg'} />
+                <a className="">
+                    <img className='md:w-36 w-28' src={'/cimb_niaga.png'} />
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -35,7 +35,7 @@ const Navigation = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link href="/login" className=" bg-red-700 text-white rounded-none py-2.5 text-sm px-6 uppercase border-none hover:bg-primary/80">Login</Link>
+                {/* <Link href="/login" className=" bg-red-700 text-white rounded-none py-2.5 text-sm px-6 uppercase border-none hover:bg-primary/80">Login</Link> */}
             </div>
         </div>
     )
