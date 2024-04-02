@@ -21,6 +21,7 @@ interface FormRegistration {
     phone : string
     instagram : string
     city : string
+    nomorKtp : string
 }
 
 const RegisterOnline = () => {
@@ -104,7 +105,7 @@ const RegisterOnline = () => {
 
     // Handle Create Doc based on UID
     const createUserToFirestore = async (uid:string, data:FormRegistration) =>{
-        const {checked, firstName, lastName, tempatLahir, tanggalLahir, email, password, phone, instagram, city} = data
+        const {checked, firstName, lastName, tempatLahir, tanggalLahir, email, password, phone, instagram, city, nomorKtp} = data
         try{
             const dataCollection = collection(getFirestore(app),'user');
             const dataDoc = doc(dataCollection, uid)
@@ -121,7 +122,7 @@ const RegisterOnline = () => {
                 phone, 
                 instagram, 
                 city,
-                ktp,
+                nomorKtp,
                 createdAt : Timestamp.now()
             })
         }
@@ -141,7 +142,7 @@ const RegisterOnline = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className='bg-base-100 w-11/12 md:w-7/12 px-8 py-8'>
                     {/* <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'}/> */}
                     <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3>
-                    <h3 className='font-semibold text-lg mt-1 text-center text-white'>ONLINE REGISTRATION</h3>
+                    <h3 className='font-semibold text-lg mt-1 text-center text-white'>ONLINE AUDITION</h3>
                     <div className='md:px-12 px-2 mt-8'>
                         <p className='text-sm text-white font-semibold'>Publication Conformation</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya dengan ini memberikan persetujuan untuk mempublikasi material konten yang mengandung keterlibatan saya dalam proses audisi dari Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan diri saya dalam konteks audisi, dan saya dengan sadar memberikan hak kepada CIMB Niaga untuk menggunakan dan mempublikasikan konten tersebut di berbagai media termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya. </p>
@@ -203,10 +204,15 @@ const RegisterOnline = () => {
                             <input {...register("city",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Semarang'  />
                         </div>
                         <div className='flex flex-col mt-6 flex-1'>
+                            <label className='text-xs text-opacity-50' id="ktp">Nomor KTP</label>
+                            {errors.nomorKtp && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                            <input {...register("nomorKtp",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='3312412312421'  />
+                        </div>
+                        {/* <div className='flex flex-col mt-6 flex-1'>
                             <p className='text-xs text-red-500'>{errKtp}</p>
                             <label className='text-xs text-opacity-50' id="city">Foto KTP</label>
                             <input required onChange={e=>handleUploadKTP(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
-                        </div>
+                        </div> */}
                         <div className='flex flex-col mt-6 flex-1'>
                             {errCaptcha && <p className='text-xs text-red-500 text-center mb-2'>verifikasi diperlukan!</p>}
                             <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_CLIENT_SIDE!} className='mx-auto' onChange={setCaptcha} />

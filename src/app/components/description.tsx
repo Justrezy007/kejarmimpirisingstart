@@ -4,7 +4,7 @@ import React,{useState, useEffect} from 'react'
 const Description = () => {
     const [count, setCount] = useState<number>(0)
 
-    const imageShow = ["DSC06089.JPG", "DSC06084.JPG", "DSC05444.JPG", "DSC06471.JPG", "DSC05591.JPG", "DSC06486.JPG", "DSC06080.JPG", "DSC05751.JPG", "DSC05584.JPG", "DSC06477.JPG"]
+    const imageShow = ["DSC05444.jpg", "DSC06084.jpg", "DSC05584.jpg", "DSC05751.jpg", "DSC06089.jpg", "DSC05591.jpg", "DSC06471.jpg", "DSC06477.jpg", "DSC06080.jpg", "DSC06486.jpg"]
 
     useEffect(() => {
         if (count < imageShow.length) {

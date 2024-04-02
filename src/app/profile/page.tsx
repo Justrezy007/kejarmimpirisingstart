@@ -179,8 +179,8 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <button onClick={e => setEditor(!editor)} className='px-8 py-1.5 bg-red-700 mt-8'>Ubah Data</button>     
-                        <button onClick={e=> handleSignOut(e)}className='text-red-700 px-8 py-2 mt-8'>Sign Out</button>
+                        {/* <button onClick={e => setEditor(!editor)} className='px-8 py-1.5 bg-red-700 mt-8'>Ubah Data</button>      */}
+                        <button onClick={e=> handleSignOut(e)}className='text-white bg-red-700 px-8 py-2 mt-8'>Sign Out</button>
                     </div>
                 </div>
             </div>

@@ -21,6 +21,7 @@ interface FormRegistration {
     phone : string
     instagram : string
     city : string
+    nomorKtp : string
 }
 
 const RegisterOffline = () => {
@@ -104,7 +105,7 @@ const RegisterOffline = () => {
 
     // Handle Create Doc based on UID
     const createUserToFirestore = async (uid:string, data:FormRegistration) =>{
-        const {checked, firstName, lastName, tempatLahir, tanggalLahir, email, password, phone, instagram, city} = data
+        const {checked, firstName, lastName, tempatLahir, tanggalLahir, email, password, phone, instagram, city, nomorKtp} = data
         try{
             const dataCollection = collection(getFirestore(app),'user');
             const dataDoc = doc(dataCollection, uid)
@@ -121,7 +122,7 @@ const RegisterOffline = () => {
                 phone, 
                 instagram, 
                 city,
-                ktp,
+                nomorKtp,
                 createdAt : Timestamp.now()
             })
         }
@@ -208,10 +209,15 @@ const RegisterOffline = () => {
                             {/* <input {...register("city",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Jakarta'  /> */}
                         </div>
                         <div className='flex flex-col mt-6 flex-1'>
+                            <label className='text-xs text-opacity-50' id="ktp">Nomor KTP</label>
+                            {errors.nomorKtp && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                            <input {...register("nomorKtp",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='3312412312421'  />
+                        </div>
+                        {/* <div className='flex flex-col mt-6 flex-1'>
                             <p className='text-xs text-red-500'>{errKtp}</p>
                             <label className='text-xs text-opacity-50' id="city">Foto KTP</label>
                             <input required onChange={e=>handleUploadKTP(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
-                        </div>
+                        </div> */}
                         <div className='flex flex-col mt-6 flex-1'>
                             {errCaptcha && <p className='text-xs text-red-500 text-center mb-2'>verifikasi diperlukan!</p>}
                             <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_CLIENT_SIDE!} className='mx-auto' onChange={setCaptcha} />
