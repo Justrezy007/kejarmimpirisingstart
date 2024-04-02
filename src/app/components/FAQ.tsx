@@ -97,8 +97,8 @@ const FAQ = () => {
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi melalui email dan/atau WhatsApp untuk instruksi lebih lanjut.</li>
                                     <li>Peserta wajib memiliki rekening tabungan CIMB Niaga.</li>
                                     <li>Selama audisi offline di Jakarta, peserta akan dipanggil sesuai dengan nomor urut yang telah ditentukan.</li>
-                                    <li>Peserta harus menampilkan lagu "Kejar Mimpimu - Dee Lestari" versi bahasa Inggris dan menyiapkan tambahan satu lagu bebas.</li>
-                                    <li>Durasi audisi sekitar 7 menit, dan peserta dapat menggunakan instrumen musik atau lagu minus one dari "Kejar Mimpimu - Dee Lestari".</li>
+                                    <li>Peserta harus menampilkan lagu &quot;Kejar Mimpimu - Dee Lestari&quot; versi bahasa Inggris dan menyiapkan tambahan satu lagu bebas.</li>
+                                    <li>Durasi audisi sekitar 7 menit, dan peserta dapat menggunakan instrumen musik atau lagu minus one dari &quot;Kejar Mimpimu - Dee Lestari&quot;.</li>
                                 </ul>
                             </li>
 
@@ -111,7 +111,7 @@ const FAQ = () => {
                             </li>
                         </ul>
 
-                        <p>Setelah itu, pemenang Top 1 akan menjalani Training Offline yang detailnya masih akan diumumkan di Jakarta. Pemenang akan tampil di konser "Kejar Mimpi untuk Indonesia 2024" bersama Andi Rianto dan beberapa penyanyi papan atas pada tanggal 24 Agustus 2024.</p>
+                        <p>Setelah itu, pemenang Top 1 akan menjalani Training Offline yang detailnya masih akan diumumkan di Jakarta. Pemenang akan tampil di konser &quot;Kejar Mimpi untuk Indonesia 2024&quot; bersama Andi Rianto dan beberapa penyanyi papan atas pada tanggal 24 Agustus 2024.</p>
 
                     </div>
                 </div>

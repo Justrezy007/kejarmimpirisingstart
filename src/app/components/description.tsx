@@ -28,7 +28,7 @@ const Description = () => {
                     </span>
                 </h2>
                 <p className="text-md mt-4 text-gray-300">
-                    Kejar Mimpi Rising Start Singer adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu  "Kejar Mimpimu" karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.
+                    Kejar Mimpi Rising Start Singer adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu  &quot;Kejar Mimpimu&quot; karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.
                 </p>
                 <p className="text-md mt-4 text-gray-300">
                 Tahun ini, Kompetisi Rising Start Singer diadakan lintas CIMB Group yang terdiri dari negara XXX, XXX, XXX, dan XXX
