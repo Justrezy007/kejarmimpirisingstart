@@ -1,9 +1,24 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 
 const Requirement = () => {
     const [isModalOfflineOpen, setModalOfflineOpen] = useState(false);
     const [isModalOnlineOpen, setModalOnlineOpen] = useState(false);
+    const [count, setCount] = useState<number>(0)
+
+    const imageShow = ["DSC05655.JPG", "DSC06641.JPG", "DSC06168.JPG", "DSC05931.JPG", "DSC05468.JPG", "DSC06008.JPG", "DSC05642.JPG", "DSC06648.JPG", "DSC06124.JPG", "DSC05740.JPG", "DSC06243.JPG", "DSC05438.JPG", "DSC05924.JPG", "DSC05987.JPG", "DSC06112.JPG", "DSC06664.JPG", "DSC05659.JPG", "DSC06052.JPG", "DSC06652.JPG", "DSC05738.JPG"]
+
+    useEffect(() => {
+        if (count < imageShow.length) {
+          const timer = setTimeout(() => {
+            setCount(count + 1);
+          }, 1500); 
+          return () => clearTimeout(timer);
+        }
+        else{
+            setCount(0)
+        }
+      }, [count, imageShow.length]);
     return (
         <div className="bg-base-100 md:w-10/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
 
@@ -66,7 +81,7 @@ const Requirement = () => {
                 </div>
             </div>
             <div className="flex justify-center order-1 items-center md:py-0 py-14 gap-2 lg:p-28">
-                <img src={'./Requirement.png'} className="w-80 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" />
+                <img src={`./Gallery_Peserta/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" />
             </div>
         </div>
 

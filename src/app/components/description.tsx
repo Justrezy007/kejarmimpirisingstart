@@ -1,6 +1,23 @@
-import React from 'react'
+'use client'
+import React,{useState, useEffect} from 'react'
 
 const Description = () => {
+    const [count, setCount] = useState<number>(0)
+
+    const imageShow = ["DSC06089.JPG", "DSC06084.JPG", "DSC05444.JPG", "DSC06471.JPG", "DSC05591.JPG", "DSC06486.JPG", "DSC06080.JPG", "DSC05751.JPG", "DSC05584.JPG", "DSC06477.JPG"]
+
+    useEffect(() => {
+        if (count < imageShow.length) {
+          const timer = setTimeout(() => {
+            setCount(count + 1);
+          }, 1500); 
+          return () => clearTimeout(timer);
+        }
+        else{
+            setCount(0)
+        }
+      }, [count, imageShow.length]);
+
     return (
 
         <div id="event" className="bg-base-100 w-full md:w-10/12 flex flex-col md:flex-row mx-auto pt-28 overflow-hidden relative lg:items-center">
@@ -11,17 +28,17 @@ const Description = () => {
                     </span>
                 </h2>
                 <p className="text-md mt-4 text-gray-300">
-                    Kejar Mimpi Rising Start:Singer adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu  "Kejar Mimpimu" karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.
+                    Kejar Mimpi Rising Start Singer adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu  "Kejar Mimpimu" karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.
                 </p>
                 <p className="text-md mt-4 text-gray-300">
-                Tahun ini, Kompetisi Rising Start:Singer diadakan lintas CIMB Group yang terdiri dari negara XXX, XXX, XXX, dan XXX
+                Tahun ini, Kompetisi Rising Start Singer diadakan lintas CIMB Group yang terdiri dari negara XXX, XXX, XXX, dan XXX
                 </p>
                 <p className="text-md mt-4 text-gray-300">
                 Yuk #KejarMimpi bersama CIMB Niaga!
                 </p>
             </div>
             <div className="flex justify-center md:order-2 order-1 flex-1 items-center gap-2 lg:p-24">
-                <img src={'./Desc.png'} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)]" alt="Tree" />
+                <img src={`./Gallery_Judges/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)]" alt="Tree" />
             </div>
         </div>
 

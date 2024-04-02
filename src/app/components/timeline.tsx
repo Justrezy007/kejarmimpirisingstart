@@ -7,7 +7,7 @@ const   Timeline = () => {
                 TIMELINE
             </h2>
             <li>
-                <div className="timeline-end my-8">3 Mei - 8 Juli 24’</div>
+                <div className="timeline-end mx-8 my-8">25 April - 20 Juni 24’</div>
                 <div className="timeline-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                 </div>
@@ -16,29 +16,38 @@ const   Timeline = () => {
             </li>
             <li>
                 <hr />
-                <div className="timeline-start my-8">13 Mei - 30 Mei 24’</div>
+                <div className="timeline-start my-8 mx-8">Manado&emsp;&emsp;: 19 Mei 24’<br/>Jogja &emsp;&emsp;&emsp;: 1 Juni 24’<br />Jakarta &emsp;&emsp;: 15 Juni 24’</div>
                 <div className="timeline-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                 </div>
-                <div className="timeline-end bg-white text-base-100 px-8 timeline-box">Registration Offline</div>
+                <div className="timeline-end bg-white text-base-100 px-8 timeline-box">Offline Audition (Phase 1)</div>
                 <hr />
             </li>
             <li>
                 <hr />
-                <div className="timeline-end my-8">3 Juni - 8 Juli 24’</div>
+                <div className="timeline-end mx-8 my-8">7 Juli 24’</div>
                 <div className="timeline-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                 </div>
-                <div className="timeline-start bg-white text-base-100 px-8 timeline-box">Offline Audition</div>
+                <div className="timeline-start bg-white text-base-100 px-8 timeline-box">Top 10 Indonesia (Phase 2)</div>
                 <hr />
             </li>
             <li>
                 <hr />
-                <div className="timeline-start my-8">8 Juli 24’</div>
+                <div className="timeline-start mx-8 my-8">14 Juli 24’</div>
                 <div className="timeline-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                 </div>
-                <div className="timeline-end bg-white text-base-100 px-8 timeline-box">Announcement</div>
+                <div className="timeline-end bg-white text-base-100 px-8 timeline-box">Top Regional (Phase 3), Winner Announcement,<br /> & Press Conference</div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div className="timeline-end mx-8 my-8">16-17 Juli 24’</div>
+                <div className="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+                </div>
+                <div className="timeline-start bg-white text-base-100 px-8 timeline-box">Top Regional Photo Shooting</div>
                 <hr />
             </li>
         </ul>

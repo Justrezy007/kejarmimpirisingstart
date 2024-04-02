@@ -1,13 +1,6 @@
-'use client'
-import React, { useState } from 'react'
+import React from 'react'
 
 const FAQ = () => {
-    const [faqLogic, setFaqLogic] = useState([false, false, false, false, false, false, false, false, false, false])
-    const handleLogic = (i: number) => {
-        let newLogic = faqLogic
-        newLogic[i - 1] = !faqLogic[i - 1]
-        setFaqLogic(newLogic)
-    }
     return (
         <div id="faq" className="w-full bg-base-200 mx-auto">
             <div className="md:w-10/12 px-8 md:px-0 py-12 mx-auto">
@@ -126,17 +119,17 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                    Kapan pengumuman hasil audisi?
+                        Kapan pengumuman hasil audisi?
                     </div>
                     <div className="collapse-content text-gray-400">
-                    <table className='table table-zebra' >
+                        <table className='table table-zebra' >
                             <thead>
                                 <tr className='text-center border border-white border-opacity-10'>
                                     <th className='border border-white border-opacity-10'>Informasi</th>
                                     <th className='border border-white border-opacity-10'>Jadwal</th>
                                 </tr>
                             </thead>
-                            <tbody className=''>
+                            <tbody>
                                 <tr className='border border-white border-opacity-10'>
                                     <td className='border border-white border-opacity-10'>Pengumuman Lolos Tahap 1 | Top 10</td>
                                     <td className='border border-white border-opacity-10'>Sabtu, 29 Juni 2024</td>
@@ -150,120 +143,128 @@ const FAQ = () => {
                                     <td className='border border-white border-opacity-10'>Sabtu, 13 Juli 2024</td>
                                 </tr>
                             </tbody>
-                            </table>
+                        </table>
                     </div>
                 </div>
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                    Bagaimana aspek penilaian dari audisi ini?
+                        Bagaimana aspek penilaian dari audisi ini?
                     </div>
                     <div className="collapse-content text-gray-400">
-                    <table className='table table-zebra border border-white border-opacity-10'>
-                                <tr className='border border-white border-opacity-10'>
-                                    <th>Audisi</th>
-                                    <th>Aspek Penilaian</th>
-                                    <th>Kualitas Vokal</th>
-                                    <th>Penghayatan Lagu</th>
-                                    <th>Penguasaan Panggung</th>
-                                    <th>Lafal Bahasa Inggris</th>
-                                </tr>
-                                <tr className='border border-white border-opacity-10'>
-                                    <td >Tahap 1</td>
-                                    <td>Bobot (%)</td>
-                                    <td>40%</td>
-                                    <td>30%</td>
-                                    <td>30%</td>
-                                    <td >-</td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10'>
-                                    <td>Keterangan</td>
-                                    <td >Aspek penilaian yang diberlakukan pada tahap awal audisi.</td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10'>
-                                    <td >Tahap 2-3</td>
-                                    <td>Bobot (%)</td>
-                                    <td>40%</td>
-                                    <td>20%</td>
-                                    <td>20%</td>
-                                    <td>20%</td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10'>
-                                    <td>Keterangan</td>
-                                    <td>Aspek penilaian yang diberlakukan pada tahap lanjutan audisi.</td>
-                                </tr>
-                            </table>
+                        <table className='table table-zebra border border-white border-opacity-10'>
+                            <thead>
+                            <tr className='border border-white border-opacity-10'>
+                                <th>Audisi</th>
+                                <th>Aspek Penilaian</th>
+                                <th>Kualitas Vokal</th>
+                                <th>Penghayatan Lagu</th>
+                                <th>Penguasaan Panggung</th>
+                                <th>Lafal Bahasa Inggris</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr className='border border-white border-opacity-10'>
+                                <td >Tahap 1</td>
+                                <td>Bobot (%)</td>
+                                <td>40%</td>
+                                <td>30%</td>
+                                <td>30%</td>
+                                <td >-</td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10'>
+                                <td>Keterangan</td>
+                                <td >Aspek penilaian yang diberlakukan pada tahap awal audisi.</td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10'>
+                                <td >Tahap 2-3</td>
+                                <td>Bobot (%)</td>
+                                <td>40%</td>
+                                <td>20%</td>
+                                <td>20%</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10'>
+                                <td>Keterangan</td>
+                                <td>Aspek penilaian yang diberlakukan pada tahap lanjutan audisi.</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                    Apa saja hadiah yang akan diberikan bagi pemenang audisi?
+                        Apa saja hadiah yang akan diberikan bagi pemenang audisi?
                     </div>
                     <div className="collapse-content text-gray-400">
-                    <table className='table table-zebra border border-white border-opacity-10'>
-                                <tr className='border border-white border-opacity-10 text-center'>
-                                    <th className='border border-white border-opacity-10'>Urutan Juara</th>
-                                    <th className='border border-white border-opacity-10'>Hadiah</th>
-                                    <th className='border border-white border-opacity-10'>Kesempatan tampil di Konser Kejar Mimpi untuk Indonesia 2024 di Solo dengan Andi Rianto beserta penyanyi papan atas dari Indonesia</th>
-                                    <th className='border border-white border-opacity-10'>Kesempatan tampil di acara undangan tamu VVIP Road to Konser Kejar Mimpi untuk Indonesia 2024 di Solo</th>
-                                    <th className='border border-white border-opacity-10'>Tabungan CIMB Niaga</th>
-                                    <th className='border border-white border-opacity-10'>Tiket Gratis Nonton Konser Kejar Mimpi 2024 (Exclude Akomodasi)</th>
-                                </tr>
-                                <tr className='border border-white border-opacity-10 text-center'>
-                                    <td className='border border-white border-opacity-10'>1</td>
-                                    <td className='border border-white border-opacity-10'>Rp35.000.000</td>
-                                    <td className='border border-white border-opacity-10'>✅</td>
-                                    <td className='border border-white border-opacity-10'>✅</td>
-                                    <td className='border border-white border-opacity-10'>✅</td>
-                                    <td className='border border-white border-opacity-10'>2 Tiket</td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10 text-center'>
-                                    <td className='border border-white border-opacity-10'>2</td>
-                                    <td className='border border-white border-opacity-10'>Rp25.000.000</td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'>✅</td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'>2 Tiket</td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10 text-center'>
-                                    <td className='border border-white border-opacity-10'>3</td>
-                                    <td className='border border-white border-opacity-10'>Rp15.000.000</td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'>✅</td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'>2 Tiket</td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10 text-center'>
-                                    <td className='border border-white border-opacity-10'>Top Regional</td>
-                                    <td className='border border-white border-opacity-10'>Rp3.500.000</td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                </tr>
-                                <tr className='border border-white border-opacity-10 text-center'>
-                                    <td className='border border-white border-opacity-10'>Top 10 Indonesia</td>
-                                    <td className='border border-white border-opacity-10'>Rp1.500.000</td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                    <td className='border border-white border-opacity-10'></td>
-                                </tr>
-                            </table>
+                        <table className='table table-zebra border border-white border-opacity-10'>
+                            <thead>
+                            <tr className='border border-white border-opacity-10 text-center'>
+                                <th className='border border-white border-opacity-10'>Urutan Juara</th>
+                                <th className='border border-white border-opacity-10'>Hadiah</th>
+                                <th className='border border-white border-opacity-10'>Kesempatan tampil di Konser <br /> Kejar Mimpi untuk Indonesia 2024<br /> di Solo dengan Andi Rianto <br />beserta penyanyi papan atas <br />dari Indonesia</th>
+                                <th className='border border-white border-opacity-10'>Kesempatan tampil di acara <br />undangan tamu VVIP Road to <br/>Konser Kejar Mimpi  untuk <br />Indonesia 2024 di Solo</th>
+                                <th className='border border-white border-opacity-10'>Tabungan <br />CIMB Niaga</th>
+                                <th className='border border-white border-opacity-10'>Tiket Gratis Nonton <br />Konser Kejar Mimpi 2024 <br/>(Exclude Akomodasi)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr className='border border-white border-opacity-10 text-center'>
+                                <td className='border border-white border-opacity-10'>1</td>
+                                <td className='border border-white border-opacity-10'>Rp35.000.000</td>
+                                <td className='border border-white border-opacity-10'>✅</td>
+                                <td className='border border-white border-opacity-10'>✅</td>
+                                <td className='border border-white border-opacity-10'>✅</td>
+                                <td className='border border-white border-opacity-10'>2 Tiket</td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10 text-center'>
+                                <td className='border border-white border-opacity-10'>2</td>
+                                <td className='border border-white border-opacity-10'>Rp25.000.000</td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'>✅</td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'>2 Tiket</td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10 text-center'>
+                                <td className='border border-white border-opacity-10'>3</td>
+                                <td className='border border-white border-opacity-10'>Rp15.000.000</td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'>✅</td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'>2 Tiket</td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10 text-center'>
+                                <td className='border border-white border-opacity-10'>Top Regional</td>
+                                <td className='border border-white border-opacity-10'>Rp3.500.000</td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'></td>
+                            </tr>
+                            <tr className='border border-white border-opacity-10 text-center'>
+                                <td className='border border-white border-opacity-10'>Top 10 Indonesia</td>
+                                <td className='border border-white border-opacity-10'>Rp1.500.000</td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'></td>
+                                <td className='border border-white border-opacity-10'></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                    Apakah peserta yang lolos ke tahap 2 dan 3 akan diberikan akomodasi oleh CIMB Niaga?
+                        Apakah peserta yang lolos ke tahap 2 dan 3 akan diberikan akomodasi oleh CIMB Niaga?
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                        Khusus peserta di luar kota Jabodetabek, pada audisi  tahap 2 dan 3 akan diberikan akomodasi oleh CIMB Niaga
+                            Khusus peserta di luar kota Jabodetabek, pada audisi  tahap 2 dan 3 akan diberikan akomodasi oleh CIMB Niaga
                         </p>
                     </div>
                 </div>
@@ -271,11 +272,11 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                    Di mana konser Kejar Mimpi 2024 akan dilaksanakan?
+                        Di mana konser Kejar Mimpi 2024 akan dilaksanakan?
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                        Konser Kejar Mimpi 2024 akan dilaksanakan di Solo pada tanggal 24 Agustus 2024 dengan jajaran penampilan oleh penyanyi papan atas dari Indonesia
+                            Konser Kejar Mimpi 2024 akan dilaksanakan di Solo pada tanggal 24 Agustus 2024 dengan jajaran penampilan oleh penyanyi papan atas dari Indonesia
                         </p>
                     </div>
                 </div>
@@ -283,11 +284,11 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                    Bagaimana saya dapat mendapatkan informasi terupdate terkait program ini?
+                        Bagaimana saya dapat mendapatkan informasi terupdate terkait program ini?
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                        Ikuti sosial media CIMB Niaga dan apabila terdapat kendala maupun informasi lebih lanjut, dapat menghubungi Instagram @cimb_niaga dan atau @kejarmimpi.id
+                            Ikuti sosial media CIMB Niaga dan apabila terdapat kendala maupun informasi lebih lanjut, dapat menghubungi Instagram @cimb_niaga dan atau @kejarmimpi.id
                         </p>
                     </div>
                 </div>

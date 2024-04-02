@@ -139,7 +139,7 @@ const RegisterOffline = () => {
             {(isLoading || loadImage) && <Loading />}
             <div className="container flex items-center justify-center flex-1 h-full mx-auto py-8">
                 <form onSubmit={handleSubmit(onSubmit)} className='bg-base-100 w-11/12 md:w-7/12 px-8 py-8'>
-                    <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'}/>
+                    {/* <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'}/> */}
                     <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3>
                     <h3 className='font-semibold text-lg mt-1 text-center text-white'>OFFLINE AUDITION</h3>
                     <div className='md:px-12 px-2 mt-8'>
