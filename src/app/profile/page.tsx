@@ -11,8 +11,7 @@ import {app} from "@/app/firebase/config"
 const Profile = () => {
     const [editor, setEditor] = useState(false)
     const [checked, setChecked] = useState(false)
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
+    const [fullName, setFullName] = useState('')
     const [tempatLahir, setTempatLahir] = useState('')
     const [tanggalLahir, setTanggalLahir] = useState('')
     const [email, setEmail] = useState('')
@@ -50,8 +49,7 @@ const Profile = () => {
         }
         if(!loadingUserData){
             console.log(userData?.data())
-            setFirstName(userData?.data()?.firstName)
-            setLastName(userData?.data()?.lastName)
+            setFullName(userData?.data()?.fullName)
             setTempatLahir(userData?.data()?.tempatLahir)
             setTanggalLahir(userData?.data()?.tanggalLahir)
             setEmail(userData?.data()?.email)
@@ -130,7 +128,7 @@ const Profile = () => {
                     <img alt="profil" src="/avatar_boy.png" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white dark:border-gray-800" />
                 </div>
                 <p className="mt-2 text-xl font-medium text-gray-800 dark:text-white">
-                    {firstName + " " + lastName}
+                    {fullName}
                 </p>
                 <p className="mb-4 text-xs text-gray-400 capitalize">
                     {type} Participant
@@ -141,7 +139,7 @@ const Profile = () => {
                             <p className="flex flex-col">
                                 Nama
                                 <span className="font-bold text-black dark:text-white">
-                                    {firstName + " " + lastName}
+                                    {fullName}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">

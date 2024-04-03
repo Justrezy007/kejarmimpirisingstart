@@ -12,16 +12,17 @@ import Loading from '../components/loading'
 
 interface FormRegistration {
     checked: boolean
-    firstName : string
-    lastName : string
-    tempatLahir : string
-    tanggalLahir : Date
-    email : string
-    password : string
-    phone : string
-    instagram : string
-    city : string
-    nomorKtp : string
+    fullName: string
+    tempatLahir: string
+    tanggalLahir: Date
+    email: string
+    password: string
+    phone: string
+    instagram: string
+    tiktok : string
+    city: string
+    getInformation : string
+    nomorKtp: string
 }
 
 const RegisterOffline = () => {
@@ -29,8 +30,10 @@ const RegisterOffline = () => {
     const [captcha, setCaptcha] = useState<string | null>('')
     const [errCaptcha, setErrCaptcha] = useState<boolean>(false)
     const [loadImage, setLoadImage] = useState<boolean>(false)
-    const [ktp, setKTP] = useState('')
-    const [errKtp, setErrKtp] = useState('')
+    const [proveOcto, setProveOcto] = useState('')
+    const [errProveOcto, setErrProveOcto] = useState('')
+    const [profilePict, setProfilePict] = useState('')
+    const [errProfilePict, setErrProfilePict] = useState('')
     const [errorSignUp, setErrorSignUp] = useState('')
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -57,29 +60,52 @@ const RegisterOffline = () => {
         }
     },[])
 
-    // Handle Upload KTP
-    const handleUploadKTP = async (e: ChangeEvent<HTMLInputElement>) => {
+    // Handle Upload Prove
+    const handleUploadProve = async (e: ChangeEvent<HTMLInputElement>) => {
         const validImageTypes = ['jpg', 'jpeg', 'png'];
         setLoadImage(true)
-        if(e.target.files?.length) { 
-            const folder = 'user/';
+        if (e.target.files?.length) {
+            const folder = 'user/ktp';
             let ext = e.target.files[0].name.split('.').pop();
             ext = ext ? ext : ''; // To ensure ext is not undefined
-          
+
             if (validImageTypes.includes(ext.toLowerCase())) {
                 const imagePath = await uploadFile(e.target.files[0], folder);
                 const imageUrl = await getFile(imagePath);
-                setKTP(imageUrl); // Assuming setKTP is a state setter or function somewhere in your code
+                setProveOcto(imageUrl); 
                 setLoadImage(false);
             } else {
-                setErrKtp('wrong file extension');
+                setErrProveOcto('wrong file extension');
                 setLoadImage(false)
             }
-        }  
-        setLoadImage(false)      
+        }
+        setLoadImage(false)
+    }
+
+    // Handle Upload Foto Diri
+    const handleUploadProfile = async (e: ChangeEvent<HTMLInputElement>) => {
+        const validImageTypes = ['jpg', 'jpeg', 'png'];
+        setLoadImage(true)
+        if (e.target.files?.length) {
+            const folder = 'user/profile';
+            let ext = e.target.files[0].name.split('.').pop();
+            ext = ext ? ext : ''; // To ensure ext is not undefined
+
+            if (validImageTypes.includes(ext.toLowerCase())) {
+                const imagePath = await uploadFile(e.target.files[0], folder);
+                const imageUrl = await getFile(imagePath);
+                setProfilePict(imageUrl); 
+                setLoadImage(false);
+            } else {
+                setErrProfilePict('wrong file extension');
+                setLoadImage(false)
+            }
+        }
+        setLoadImage(false)
     }
 
     const onSubmit: SubmitHandler<FormRegistration> = async (data) => {
+        setIsLoading(true)
         setErrorSignUp('')
         if(captcha != ''){
         try{
@@ -89,45 +115,51 @@ const RegisterOffline = () => {
                 sessionStorage.setItem('user', res?.user.uid);
                 router.push('/profile')
             } else {
+                setIsLoading(false)
                 throw new Error('User was found');
             }
 
         } catch(err){
             console.log(err)
             setErrorSignUp('Email Telah digunakan!')
+            setIsLoading(false)
         }
         }
         else{
             setErrCaptcha(true)
+            setIsLoading(false)
         }
     }
 
 
     // Handle Create Doc based on UID
-    const createUserToFirestore = async (uid:string, data:FormRegistration) =>{
-        const {checked, firstName, lastName, tempatLahir, tanggalLahir, email, password, phone, instagram, city, nomorKtp} = data
-        try{
-            const dataCollection = collection(getFirestore(app),'user');
+    const createUserToFirestore = async (uid: string, data: FormRegistration) => {
+        const { checked, fullName, tempatLahir, tanggalLahir, email, password, phone, instagram, city, nomorKtp, getInformation } = data
+        try {
+            const dataCollection = collection(getFirestore(app), 'user');
             const dataDoc = doc(dataCollection, uid)
-            setDoc(dataDoc,{
+            setDoc(dataDoc, {
                 uid,
-                type : "offline",
-                checked, 
-                firstName, 
-                lastName, 
-                tempatLahir, 
-                tanggalLahir, 
-                email, 
-                password, 
-                phone, 
-                instagram, 
+                type: "offline",
+                checked,
+                fullName,
+                tempatLahir,
+                tanggalLahir,
+                email,
+                password,
+                phone,
+                instagram,
                 city,
                 nomorKtp,
-                createdAt : Timestamp.now()
+                profilePict,
+                proveOcto,
+                getInformation,
+                createdAt: Timestamp.now()
             })
         }
-        catch(err){
+        catch (err) {
             console.log(err)
+            setIsLoading(false)
         }
     }
 
@@ -140,9 +172,9 @@ const RegisterOffline = () => {
             {(isLoading || loadImage) && <Loading />}
             <div className="container flex items-center justify-center flex-1 h-full mx-auto py-8">
                 <form onSubmit={handleSubmit(onSubmit)} className='bg-base-100 w-11/12 md:w-7/12 px-8 py-8'>
-                    {/* <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'}/> */}
-                    <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3>
-                    <h3 className='font-semibold text-lg mt-1 text-center text-white'>OFFLINE AUDITION</h3>
+                    <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'}/>
+                    {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3> */}
+                    <h3 className='font-semibold text-lg mt-1 text-center text-white'>PENDAFTARAN AUDISI OFFLINE</h3>
                     <div className='md:px-12 px-2 mt-8'>
                         <p className='text-sm text-white font-semibold'>Publication Conformation</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya dengan ini memberikan persetujuan untuk mempublikasi material konten yang mengandung keterlibatan saya dalam proses audisi dari Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan diri saya dalam konteks audisi, dan saya dengan sadar memberikan hak kepada CIMB Niaga untuk menggunakan dan mempublikasikan konten tersebut di berbagai media termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya. </p>
@@ -152,15 +184,15 @@ const RegisterOffline = () => {
                         <input {...register("checked",{required:true})} type="checkbox" className="mt-2 cursor-pointer"  /><span className='text-white ml-2 mt-2 text-sm'>Saya Setuju</span> {errors.checked && <span className='text-xs text-red-500'>Required Check</span>}
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
                             <div className='flex flex-col mt-6 flex-1'>
-                                <label className='text-xs text-opacity-50' id="first-name">Nama Depan </label>
-                                {errors.firstName && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                                <input {...register("firstName",{required:true, minLength: 3, maxLength: 20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Nama Depan' />
+                                <label className='text-xs text-opacity-50' id="first-name">Nama Lengkap </label>
+                                {errors.fullName && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                                <input {...register("fullName", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Nama Lengkap' />
                             </div>
-                            <div className='flex flex-col mt-6 flex-1'>
+                            {/* <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="last-name">Nama Akhir</label>
                                 {errors.lastName && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                                 <input {...register("lastName",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Nama Akhir'  />
-                            </div>
+                            </div> */}
                         </div>
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
                             <div className='flex flex-col mt-6 flex-1'>
@@ -190,12 +222,24 @@ const RegisterOffline = () => {
                             <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="phone">No. Telephone</label>
                                 {errors.phone && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                                <input {...register("phone",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='08111111111' />
+                                <input {...register("phone", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='08111111111' />
+                            </div>
+                            <div className='flex flex-col mt-6 flex-1'>
+                                <label className='text-xs text-opacity-50' id="ktp">Nomor KTP</label>
+                                {errors.nomorKtp && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                                <input {...register("nomorKtp", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='3312412312421' />
+                            </div>
+                        </div>
+                        <div className='flex flex-col md:flex-row justify-between md:gap-5'>
+                            <div className='flex flex-col mt-6 flex-1'>
+                                <label className='text-xs text-opacity-50' id="phone">Akun Tiktok</label>
+                                {errors.tiktok && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                                <input {...register("tiktok", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='@risingstart2024' />
                             </div>
                             <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="instagram">Akun Instagram</label>
                                 {errors.instagram && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                                <input {...register("instagram",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='@risingstart2024'  />
+                                <input {...register("instagram", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='@risingstart2024' />
                             </div>
                         </div>
                         <div className='flex flex-col mt-6 flex-1'>
@@ -209,15 +253,23 @@ const RegisterOffline = () => {
                             {/* <input {...register("city",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Jakarta'  /> */}
                         </div>
                         <div className='flex flex-col mt-6 flex-1'>
-                            <label className='text-xs text-opacity-50' id="ktp">Nomor KTP</label>
-                            {errors.nomorKtp && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                            <input {...register("nomorKtp",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='3312412312421'  />
+                            <p className='text-xs text-red-500'>{errProfilePict}</p>
+                            <label className='text-xs text-opacity-50' id="city">Foto Diri Terbaru</label>
+                            <input required onChange={e=>handleUploadProfile(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
                         </div>
-                        {/* <div className='flex flex-col mt-6 flex-1'>
-                            <p className='text-xs text-red-500'>{errKtp}</p>
-                            <label className='text-xs text-opacity-50' id="city">Foto KTP</label>
-                            <input required onChange={e=>handleUploadKTP(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
-                        </div> */}
+
+                        <div className='flex flex-col mt-6 flex-1'>
+                            <p className='text-xs text-red-500'>{errProveOcto}</p>
+                            <label className='text-xs text-opacity-50' id="city">Foto Bukti Akun OCTO Pay</label>
+                            <input required onChange={e=>handleUploadProve(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
+                        </div>
+
+                        <div className='flex flex-col mt-6 flex-1'>
+                            <label className='text-xs text-opacity-50' id="city">Dari Mana Anda Memperoleh Informasi?</label>
+                            {errors.getInformation && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                            <input {...register("getInformation", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Dari Komunitas/Sosial Media/Lainnya' />
+                        </div>
+
                         <div className='flex flex-col mt-6 flex-1'>
                             {errCaptcha && <p className='text-xs text-red-500 text-center mb-2'>verifikasi diperlukan!</p>}
                             <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_CLIENT_SIDE!} className='mx-auto' onChange={setCaptcha} />
@@ -227,7 +279,7 @@ const RegisterOffline = () => {
                     <p className={`text-red-900 px-8 py-4 mx-auto md:w-7/12 bg-red-300 bg-opacity-80 text-center mt-5 text-sm ${errorSignUp == '' ? 'hidden': 'block'}`}>{errorSignUp}</p>
                     <div className='md:px-12 px-4 flex justify-end gap-5'>
                         <Link href={'/'} className='text-red-700 px-8 py-2 mt-8 btn'>Kembali</Link>
-                        <button onClick={()=>setIsLoading(!isLoading)} type="submit" className='bg-red-700 px-8 py-2 mt-8'>Daftar</button>
+                        <button type="submit" className='bg-red-700 px-8 py-2 mt-8'>Daftar</button>
                     </div>
                 </form>
             </div>
