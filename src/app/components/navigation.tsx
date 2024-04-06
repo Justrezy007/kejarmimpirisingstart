@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Navigation = () => {
     const path = usePathname()
-    if(path === '/')
+    if(path === '/' || path === '/prize')
     return (
         <div className="navbar bg-base-300 bg-opacity-60 backdrop-blur fixed z-50 md:px-20">
             <div className="navbar-start">
@@ -17,6 +17,7 @@ const Navigation = () => {
                         <li className=''><a href='#event'>Event</a></li>
                         <li className=''><a href='#register'>Register</a></li>
                         <li className=''><a href='#timeline'>Timeline</a></li>
+                        <li className=''><Link href='/prize'>Prize</Link></li>
                         <li className=''><a href='#contact'>Contact</a></li>
                         <li className=''><a href='#faq'>FAQ</a></li>
                     </ul>
@@ -27,11 +28,12 @@ const Navigation = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#event'>Event</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#register'>Register</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#timeline'>Timeline</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#contact'>Contact</a></li>
-                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='#faq'>FAQ</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='/#event'>Event</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='/#register'>Register</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='/#timeline'>Timeline</a></li>
+                    <li className='uppercase hover:font-bold'><Link className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='/prize'>Prize</Link></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='/#contact'>Contact</a></li>
+                    <li className='uppercase hover:font-bold'><a className='hover:border-b-2 hover:bg-none rounded-none border-red-700' href='/#faq'>FAQ</a></li>
                 </ul>
             </div>
             <div className="navbar-end">

@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 
 const Footer = () => {
     const path = usePathname()
-    if(path === '/')
+    if(path === '/' || path === '/prize')
     return (
         <footer id="contact" className="bg-base-300">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">

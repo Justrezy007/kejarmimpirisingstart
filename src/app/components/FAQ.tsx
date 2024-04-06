@@ -10,11 +10,11 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                        Siapa yang bisa mengikuti audisi Rising Start ini?
+                        Siapa yang bisa mengikuti audisi CIMB Niaga Rising Start: Singing Competition 2024 ini?
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                            Siapa saja yang memenuhi persyaratan sesuai domisili dengan rentang umur 12-40 tahun dapat mengikuti audisi Rising Start: Singer ini tanpa dipungut biaya apapun. Pendaftar wajib untuk memiliki akun OCTO Pay dengan minimum deposit Rp10.000
+                            Siapa saja yang memenuhi persyaratan sesuai domisili dengan rentang umur 12-40 tahun dapat mengikuti audisi CIMB Niaga Rising Start: Singing Competition 2024 ini tanpa dipungut biaya apapun. Pendaftar wajib untuk memiliki akun OCTO Pay dengan minimum deposit Rp10.000
                         </p>
                     </div>
                 </div>
@@ -188,69 +188,6 @@ const FAQ = () => {
                             <tr className='border border-white border-opacity-10'>
                                 <td>Keterangan</td>
                                 <td>Aspek penilaian yang diberlakukan pada tahap lanjutan audisi.</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
-                        Apa saja hadiah yang akan diberikan bagi pemenang audisi?
-                    </div>
-                    <div className="collapse-content text-gray-400">
-                        <table className='table table-zebra border border-white border-opacity-10'>
-                            <thead>
-                            <tr className='border border-white border-opacity-10 text-center'>
-                                <th className='border border-white border-opacity-10'>Urutan Juara</th>
-                                <th className='border border-white border-opacity-10'>Hadiah</th>
-                                <th className='border border-white border-opacity-10'>Kesempatan tampil di Konser <br /> Kejar Mimpi untuk Indonesia 2024<br /> di Solo dengan Andi Rianto <br />beserta penyanyi papan atas <br />dari Indonesia</th>
-                                <th className='border border-white border-opacity-10'>Kesempatan tampil di acara <br />undangan tamu VVIP Road to <br/>Konser Kejar Mimpi  untuk <br />Indonesia 2024 di Solo</th>
-                                <th className='border border-white border-opacity-10'>Tabungan <br />CIMB Niaga</th>
-                                <th className='border border-white border-opacity-10'>Tiket Gratis Nonton <br />Konser Kejar Mimpi 2024 <br/>(Exclude Akomodasi)</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className='border border-white border-opacity-10 text-center'>
-                                <td className='border border-white border-opacity-10'>1</td>
-                                <td className='border border-white border-opacity-10'>Rp35.000.000</td>
-                                <td className='border border-white border-opacity-10'>✅</td>
-                                <td className='border border-white border-opacity-10'>✅</td>
-                                <td className='border border-white border-opacity-10'>✅</td>
-                                <td className='border border-white border-opacity-10'>2 Tiket</td>
-                            </tr>
-                            <tr className='border border-white border-opacity-10 text-center'>
-                                <td className='border border-white border-opacity-10'>2</td>
-                                <td className='border border-white border-opacity-10'>Rp25.000.000</td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'>✅</td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'>2 Tiket</td>
-                            </tr>
-                            <tr className='border border-white border-opacity-10 text-center'>
-                                <td className='border border-white border-opacity-10'>3</td>
-                                <td className='border border-white border-opacity-10'>Rp15.000.000</td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'>✅</td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'>2 Tiket</td>
-                            </tr>
-                            <tr className='border border-white border-opacity-10 text-center'>
-                                <td className='border border-white border-opacity-10'>Top Regional</td>
-                                <td className='border border-white border-opacity-10'>Rp3.500.000</td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'></td>
-                            </tr>
-                            <tr className='border border-white border-opacity-10 text-center'>
-                                <td className='border border-white border-opacity-10'>Top 10 Indonesia</td>
-                                <td className='border border-white border-opacity-10'>Rp1.500.000</td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'></td>
-                                <td className='border border-white border-opacity-10'></td>
                             </tr>
                             </tbody>
                         </table>

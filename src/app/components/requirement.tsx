@@ -24,17 +24,17 @@ const Requirement = () => {
 
             {isModalOfflineOpen && (
                 <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
-                    <div className="modal-box px-12">
+                    <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
                         <h3 className="font-bold text-lg">Ketentuan Skema Offline</h3>
                         <ul className="list-disc">
-                            <li>Registrasikan diri peserta pada link registrasi cimb.id/RisingStart dan pilih sesuai domisili peserta</li>
-                            <li>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
-                            <li>Apabila kuota audisi offline penuh, peserta dapat mendaftarkan diri pada skema online</li>
-                            <li>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia/English Version) dari bagian intro hingga reff di hari audisi</li>
-                            <li>Datang ke tempat audisi 1 jam sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp konfirmasi  </li>
-                            <li>Lakukan registrasi ulang dan pengambilan nomor antrian audisi</li>
-                            <li>Tunggu hingga nomor pendaftaran audisi peserta dipanggil oleh panitia</li>
-                            <li>Waktu audisi akan berlangsung kurang lebih 5 menit, peserta dapat menggunakan instrumen musik dan atau diiringi dengan lagu Kejar Mimpimu - Dee Lestari (Minus One)</li>
+                            <li className='my-2'>Registrasikan diri peserta pada link registrasi cimb.id/RisingStart dan pilih sesuai domisili peserta</li>
+                            <li className='my-2'>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
+                            <li className='my-2'>Apabila kuota audisi offline penuh, peserta dapat mendaftarkan diri pada skema online</li>
+                            <li className='my-2'>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia/English Version) dari bagian intro hingga reff di hari audisi</li>
+                            <li className='my-2'>Datang ke tempat audisi 1 jam sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp konfirmasi  </li>
+                            <li className='my-2'>Lakukan registrasi ulang dan pengambilan nomor antrian audisi</li>
+                            <li className='my-2'>Tunggu hingga nomor pendaftaran audisi peserta dipanggil oleh panitia</li>
+                            <li className='my-2'>Waktu audisi akan berlangsung kurang lebih 5 menit, peserta dapat menggunakan instrumen musik dan atau diiringi dengan lagu Kejar Mimpimu - Dee Lestari (Minus One)</li>
                         </ul>
                         <div className="modal-action">
                             <button className="btn bg-red-600" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>
@@ -46,13 +46,13 @@ const Requirement = () => {
             )}
             {isModalOnlineOpen && (
                 <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
-                    <div className="modal-box px-12">
-                        <h3 className="font-bold text-lg">Ketentuan Skema Online</h3>
+                    <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
+                        <h3 className="font-bold text-lg mt-6">Ketentuan Skema Online</h3>
                         <ul className="list-disc">
-                            <li>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia/English Version) dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
-                            <li>Dalam pembuatan video, boleh menggunakan instrumen dan dilarang dalam menggunakan filter suara atau mixing. Jangan lupa disertai tampilan video yang memperlihatkan wajah secara keseluruhan</li>
-                            <li>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi pemenang. Gunakan Hashtag #RisingStartSingerIDN, tag @cimb_niaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum </li>
-                            <li>Apabila video sudah dipublikasi, registrasikan diri peserta dengan data yang sesuai dengan identitas dan  jangan lupa untuk melampirkan bukti upload sesuai dengan prosedur pada form.</li>
+                            <li className='my-2'>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia/English Version) dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
+                            <li className='my-2'>Dalam pembuatan video, boleh menggunakan instrumen dan dilarang dalam menggunakan filter suara atau mixing. Jangan lupa disertai tampilan video yang memperlihatkan wajah secara keseluruhan</li>
+                            <li className='my-2'>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi pemenang. Gunakan Hashtag #RisingStartSingerIDN, tag @cimb_niaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum </li>
+                            <li className='my-2'>Apabila video sudah dipublikasi, registrasikan diri peserta dengan data yang sesuai dengan identitas dan  jangan lupa untuk melampirkan bukti upload sesuai dengan prosedur pada form.</li>
                         </ul>
                         <div className="modal-action">
                             <button className="btn bg-red-600" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>
@@ -77,7 +77,7 @@ const Requirement = () => {
                 </ul>
                 <div className='mt-4 flex flex-row flex-wrap gap-5'>
                     <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
-                    <button className="btn text-red-700 rounded-none" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
+                    <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
                 </div>
             </div>
             <div className="flex justify-center order-1 items-center md:py-0 py-14 gap-2 lg:p-28">
