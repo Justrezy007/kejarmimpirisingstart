@@ -8,6 +8,7 @@ import Map from "./components/map";
 import FAQ from "./components/FAQ";
 import Timeline from "./components/timeline";
 import Link from "next/link";
+import LiveCount from "./components/liveCount";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <Link href="/register-online" className="btn bg-red-700 rounded-none border-none px-8 my-6 shadow-[0_10px_50px_rgba(185,_28,_28,_0.5)] hover:bg-primary/80 hover:shadow-none">Daftar Online di Sini</Link>
       </div>
       <Timeline />
+      <LiveCount />
       <FAQ />
     </main>
   );

@@ -2,7 +2,7 @@
 import React, { useState, ChangeEvent, useEffect  } from 'react'
 import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth'
 import {auth,app} from '@/app/firebase/config'
-import { getFirestore, collection, Timestamp, doc, setDoc } from 'firebase/firestore'
+import { getFirestore, collection, Timestamp, doc, setDoc, addDoc } from 'firebase/firestore'
 import {useRouter} from 'next/navigation'
 import Link from 'next/link'
 import { uploadFile, getFile } from '../utils/uploader'
@@ -156,6 +156,9 @@ const RegisterOffline = () => {
                 getInformation,
                 createdAt: Timestamp.now()
             })
+            const cityCollection = collection(getFirestore(app),city)
+            const cityDoc = doc(cityCollection, uid)
+            setDoc(cityDoc,{uid})
         }
         catch (err) {
             console.log(err)

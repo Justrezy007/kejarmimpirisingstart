@@ -71,7 +71,7 @@ const FAQ = () => {
                                             <li>Manado:
                                                 <ul>
                                                     <li>Registrasi: Sabtu, 4 Mei 2024 - Minggu, 12 Mei 2024</li>
-                                                    <li>Audisi: Minggu, 19 Mei 2024 (Kuota: 75)</li>
+                                                    <li>Audisi: Minggu, 18 Mei 2024 (Kuota: 75)</li>
                                                 </ul>
                                             </li>
                                             <li>Jogjakarta:
@@ -93,7 +93,7 @@ const FAQ = () => {
 
                             <li><strong>Audisi Tahap 2 - Top 10:</strong>
                                 <ul className='list-disc ml-4'>
-                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 5 Juli 2024, hingga Minggu, 7 Juli 2024.</li>
+                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 26 Juli 2024, hingga Selasa, 30 Juli 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi melalui email dan/atau WhatsApp untuk instruksi lebih lanjut.</li>
                                     <li>Peserta wajib memiliki rekening tabungan CIMB Niaga.</li>
                                     <li>Selama audisi offline di Jakarta, peserta akan dipanggil sesuai dengan nomor urut yang telah ditentukan.</li>

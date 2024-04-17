@@ -93,6 +93,21 @@ const Prize = () => {
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
                   </tr>
+                  <tr className='text-center'>
+                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Top 2 Indonesia</p></td>
+                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Rp5.000.000</p></td>
+                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>
+                    </p></td>
+                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>
+                    </p></td>
+                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>
+                    </p></td>
+                  </tr> 
                 </tbody>
               </table>
 
