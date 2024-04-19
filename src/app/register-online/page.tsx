@@ -9,6 +9,7 @@ import { uploadFile, getFile } from '../utils/uploader'
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm, SubmitHandler } from "react-hook-form"
 import Loading from '../components/loading'
+import dataCity from '@/app/utils/province.json'
 
 interface FormRegistration {
     checked: boolean
@@ -25,6 +26,15 @@ interface FormRegistration {
     nomorKtp: string
 }
 
+interface City {
+    city_id: string;
+    province_id: string;
+    province: string;
+    type: string;
+    city_name: string;
+    postal_code: string;
+  }
+
 const RegisterOnline = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm<FormRegistration>()
     const [captcha, setCaptcha] = useState<string | null>('')
@@ -39,6 +49,8 @@ const RegisterOnline = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const [userSession, setUserSession] = useState<string | null>('')
+
+    const [cities, setCities] = useState<City[]>([]); // State untuk menyimpan data kota
 
     // Router Hook for redirect to Profile
     const router = useRouter()
@@ -58,6 +70,7 @@ const RegisterOnline = () => {
         if (getSession) {
             router.push('/profile')
         }
+        setCities(dataCity.rajaongkir.results);
     }, [])
 
     // Handle Upload Prove
@@ -243,8 +256,13 @@ const RegisterOnline = () => {
                         </div>
                         <div className='flex flex-col mt-6 flex-1'>
                             <label className='text-xs text-opacity-50' id="city">Asal Kota</label>
-                            {errors.city && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                            <input {...register("city", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Semarang' />
+                            {errors.city && <p className='text-xs text-red-500'>Pilih Kota yang tersedia</p>}
+                            <select className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' {...register("city",{required:true})}>
+                                {cities.map(city=>{
+                                    return(<option key={city.city_id} value={city.city_name}>{city.city_name}</option>)
+                                })}
+                            </select>
+                            {/* <input {...register("city",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Jakarta'  /> */}
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
