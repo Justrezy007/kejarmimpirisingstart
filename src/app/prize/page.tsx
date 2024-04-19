@@ -17,9 +17,9 @@ const Prize = () => {
                   <tr>
                     <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Urutan Juara</th>
                     <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tabungan CIMB Niaga</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di Konser <br /> Kejar Mimpi untuk Indonesia 2024</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di acara <br />undangan tamu VVIP Road to <br />Konser Kejar Mimpi  untuk <br />Indonesia 2024 di Solo</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tiket Gratis Nonton <br />Konser Kejar Mimpi 2024 <br />(Exclude Akomodasi)</th>
+                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di Konser  Kejar Mimpi untuk Indonesia 2024</th>
+                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di acara undangan tamu VVIP Road to Konser Kejar Mimpi  untuk Indonesia 2024 di Solo</th>
+                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tiket Gratis Nonton Konser Kejar Mimpi 2024 (Exclude Akomodasi)</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -9,6 +9,7 @@ import { uploadFile, getFile } from '../utils/uploader'
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm, SubmitHandler } from "react-hook-form"
 import Loading from '../components/loading'
+import emailjs from '@emailjs/browser';
 
 interface FormRegistration {
     checked: boolean
@@ -104,6 +105,7 @@ const RegisterOffline = () => {
         setLoadImage(false)
     }
 
+    // Handle submit
     const onSubmit: SubmitHandler<FormRegistration> = async (data) => {
         setIsLoading(true)
         setErrorSignUp('')
@@ -165,6 +167,30 @@ const RegisterOffline = () => {
             setIsLoading(false)
         }
     }
+    // Send Email to user
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        const email_params = {
+            from_name: 'horizon',
+            to_name: 'tol',
+            message: 'semoga sehat selalu'
+        }
+
+        emailjs
+            .send(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ?? "",
+                process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID ?? "",
+                email_params,
+                process.env.NEXT_PUBLIC_EMAIL_API_KEY ?? "")
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
 
     return (
         <div style={{

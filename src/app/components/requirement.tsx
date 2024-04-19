@@ -1,5 +1,5 @@
 "use client"
-import React, { useState ,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Requirement = () => {
     const [isModalOfflineOpen, setModalOfflineOpen] = useState(false);
@@ -10,17 +10,17 @@ const Requirement = () => {
 
     useEffect(() => {
         if (count < imageShow.length) {
-          const timer = setTimeout(() => {
-            setCount(count + 1);
-          }, 1500); 
-          return () => clearTimeout(timer);
+            const timer = setTimeout(() => {
+                setCount(count + 1);
+            }, 1500);
+            return () => clearTimeout(timer);
         }
-        else{
+        else {
             setCount(0)
         }
-      }, [count, imageShow.length]);
+    }, [count, imageShow.length]);
     return (
-        <div className="bg-base-100 md:w-10/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
+        <div className="bg-base-100 md:w-11/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
 
             {isModalOfflineOpen && (
                 <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
@@ -62,7 +62,7 @@ const Requirement = () => {
                     </div>
                 </div>
             )}
-            <div className="flex-1  order-2 py-12 px-8 md:px-4 sm:px-6 lg:py-20 lg:px-2 z-20">
+            <div className="flex-1 order-2 py-12 px-8 md:px-4 sm:px-6 lg:py-20 lg:px-2 lg:pr-16 z-20">
                 <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                     <span className="block">Syarat & Ketentuan Peserta</span>
                 </h2>
@@ -78,10 +78,19 @@ const Requirement = () => {
                 <div className='mt-4 flex flex-row flex-wrap gap-5'>
                     <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
                     <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>Ketentuan Online</button>
+                    <a className="btn px-6 bg-red-700 rounded-none border-none capitalize" target='_blank' href={'https://drive.google.com/drive/folders/13l_MRSra4QCyBpWo3wNBTYwjLwlSnr6P?usp=sharing'}>download minus one & lirik lagu</a>
                 </div>
             </div>
             <div className="flex justify-center order-1 items-center md:py-0 py-14 gap-2 lg:p-28">
-                <img src={`./Gallery_Peserta/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" />
+                <iframe
+                    width="420"
+                    height="300"
+                    src="https://www.youtube.com/embed/zbPt9LkPT4c?autoplay=1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+                {/* <img src={`./Gallery_Peserta/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" /> */}
             </div>
         </div>
 
