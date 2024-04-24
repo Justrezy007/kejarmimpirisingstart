@@ -5,7 +5,7 @@ const Prize = () => {
     <div className="bg-base-200 py-24">
       <h2 className="text-3xl font-extrabold my-8 text-white sm:text-4xl text-center">
         <span className="block">
-          CIMB Niaga Rising Start <span className='text-rose-700'>Prize!</span>
+        <span className='text-rose-700'>Hadiah</span> CIMB Niaga Rising Start 
         </span>
       </h2>
       <div className="container w-11/12 px-4 mx-auto sm:px-8">
@@ -17,9 +17,10 @@ const Prize = () => {
                   <tr>
                     <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Urutan Juara</th>
                     <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tabungan CIMB Niaga</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di Konser  Kejar Mimpi untuk Indonesia 2024</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di acara undangan tamu VVIP Road to Konser Kejar Mimpi  untuk Indonesia 2024 di Solo</th>
+                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di Konser Kejar Mimpi untuk Indonesia 2024 di Surakarta dengan penyanyi papan atas Indonesia</th>
+                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Menjadi talent dalam pembuatan Music Video Kejar Mimpimu - Dee Lestari (English Version)</th>
                     <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tiket Gratis Nonton Konser Kejar Mimpi 2024 (Exclude Akomodasi)</th>
+                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Terhighlight dalam kalender CIMB Niaga 2025</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -34,6 +35,8 @@ const Prize = () => {
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2 Tiket</p></td>
+                      <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
 
                   <tr className='text-center'>
@@ -42,12 +45,13 @@ const Prize = () => {
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Rp25.000.000</p></td>
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>
-                    </p></td>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2 Tiket</p></td>
+                      <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
 
                   <tr className='text-center'>
@@ -55,13 +59,14 @@ const Prize = () => {
                       <p className='text-gray-900 whitespace-no-wrap'>3</p></td>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Rp15.000.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>
-                    </p></td>
+                      <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2 Tiket</p></td>
+                      <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
                   <tr className='text-center'>
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
@@ -72,11 +77,12 @@ const Prize = () => {
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>
-                    </p></td>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
                   <tr className='text-center'>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
@@ -87,26 +93,29 @@ const Prize = () => {
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>
-                    </p></td>
+                      <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                     <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
+                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'></p></td>
                   </tr>
                   <tr className='text-center'>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Top 2 Indonesia</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Rp5.000.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
+                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'></p></td>
                   </tr> 
                 </tbody>
               </table>

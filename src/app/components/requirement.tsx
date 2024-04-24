@@ -28,10 +28,10 @@ const Requirement = () => {
                         <h3 className="font-bold text-lg">Ketentuan Skema Offline</h3>
                         <ul className="list-disc">
                             <li className='my-2'>Registrasikan diri peserta pada link registrasi cimb.id/RisingStart dan pilih sesuai domisili peserta</li>
-                            <li className='my-2'>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
+                            <li className='my-2'>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp dan atau email terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
                             <li className='my-2'>Apabila kuota audisi offline penuh, peserta dapat mendaftarkan diri pada skema online</li>
-                            <li className='my-2'>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia/English Version) dari bagian intro hingga reff di hari audisi</li>
-                            <li className='my-2'>Datang ke tempat audisi 1 jam sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp konfirmasi  </li>
+                            <li className='my-2'>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari versi Indonesia dari bagian intro hingga reff di hari audisi.</li>
+                            <li className='my-2'>Datang ke tempat audisi 1 jam sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp dan atau Email konfirmasi.</li>
                             <li className='my-2'>Lakukan registrasi ulang dan pengambilan nomor antrian audisi</li>
                             <li className='my-2'>Tunggu hingga nomor pendaftaran audisi peserta dipanggil oleh panitia</li>
                             <li className='my-2'>Waktu audisi akan berlangsung kurang lebih 5 menit, peserta dapat menggunakan instrumen musik dan atau diiringi dengan lagu Kejar Mimpimu - Dee Lestari (Minus One)</li>
@@ -49,10 +49,10 @@ const Requirement = () => {
                     <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
                         <h3 className="font-bold text-lg mt-6">Ketentuan Skema Online</h3>
                         <ul className="list-disc">
-                            <li className='my-2'>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia/English Version) dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
+                            <li className='my-2'>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia Version) dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
                             <li className='my-2'>Dalam pembuatan video, boleh menggunakan instrumen dan dilarang dalam menggunakan filter suara atau mixing. Jangan lupa disertai tampilan video yang memperlihatkan wajah secara keseluruhan</li>
-                            <li className='my-2'>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi pemenang. Gunakan Hashtag #RisingStartSingerIDN, tag @cimb_niaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum </li>
-                            <li className='my-2'>Apabila video sudah dipublikasi, registrasikan diri peserta dengan data yang sesuai dengan identitas dan  jangan lupa untuk melampirkan bukti upload sesuai dengan prosedur pada form.</li>
+                            <li className='my-2'>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi pemenang. Gunakan Hashtag #RisingStartSinger, tag @cimb_niaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum.</li>
+                            <li className='my-2'>Apabila video sudah dipublikasi, registrasikan diri peserta di link cimb.id/RisingStart dengan data yang sesuai dengan identitas dan jangan lupa untuk melampirkan bukti upload sesuai dengan prosedur pada form.</li>
                         </ul>
                         <div className="modal-action">
                             <button className="btn bg-red-600" onClick={() => setModalOnlineOpen(!isModalOnlineOpen)}>
@@ -85,7 +85,7 @@ const Requirement = () => {
                 <iframe
                     width="420"
                     height="300"
-                    src="https://www.youtube.com/embed/zbPt9LkPT4c?autoplay=1"
+                    src="https://www.youtube.com/embed/i-7AO8rA-1w?autoplay=1"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

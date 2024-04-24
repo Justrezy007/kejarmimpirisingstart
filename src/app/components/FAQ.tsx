@@ -42,9 +42,9 @@ const FAQ = () => {
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p className="text-base leading-6 ">
-                            Peserta akan menyanyikan lagu Kejar Mimpimu - Dee Lestari sesuai dengan syarat & ketentuan untuk audisi online maupun offline
+                        Peserta akan menyanyikan lagu Kejar Mimpimu - Dee Lestari sesuai dengan syarat & ketentuan untuk audisi online maupun offline<br />
                         </p>
-                        <p className="text-base leading-6 ">
+                        <p className="text-base leading-6 mt-2">
                             Informasi Tambahan
                         </p>
                         <ul className='list-disc ml-4'>
@@ -60,13 +60,13 @@ const FAQ = () => {
                     <div className="collapse-title text-xl font-medium">
                         Bagaimana timeline dan ketentuan lebih lanjut dari tahap audisi?
                     </div>
-                    <div className="collapse-content text-gray-400">
+                    <div className="collapse-content text-gray-400 leading-6">
                         <ul>
-                            <li><strong>Audisi Tahap 1:</strong>
+                            <li className='mt-3'><strong>Audisi Tahap 1:</strong>
                                 <ul>
                                     <li>Kompetisi dilakukan secara online.</li>
-                                    <li>Registrasi & Audisi berlangsung dari Sabtu, 4 Mei 2024, hingga Kamis, 20 Juni 2024.</li>
-                                    <li><strong>Audisi Offline:</strong>
+                                    <li>Registrasi & Audisi berlangsung dari Sabtu, 4 Mei 2024 - Kamis, 20 Juni 2024.</li>
+                                    <li className='mt-3'><strong>Audisi Offline:</strong>
                                         <ul className='list-disc ml-4'>
                                             <li>Manado:
                                                 <ul>
@@ -91,9 +91,9 @@ const FAQ = () => {
                                 </ul>
                             </li>
 
-                            <li><strong>Audisi Tahap 2 - Top 10:</strong>
+                            <li className='mt-3'><strong>Audisi Tahap 2 - Top 10:</strong>
                                 <ul className='list-disc ml-4'>
-                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 26 Juli 2024, hingga Selasa, 30 Juli 2024.</li>
+                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 26 Juli 2024 - Selasa, 30 Juli 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi melalui email dan/atau WhatsApp untuk instruksi lebih lanjut.</li>
                                     <li>Peserta wajib memiliki rekening tabungan CIMB Niaga.</li>
                                     <li>Selama audisi offline di Jakarta, peserta akan dipanggil sesuai dengan nomor urut yang telah ditentukan.</li>
@@ -102,16 +102,19 @@ const FAQ = () => {
                                 </ul>
                             </li>
 
-                            <li><strong>Audisi Tahap 3 - Top Regional:</strong>
+                            <li className='mt-3'><strong>Audisi Tahap 3 - Top Regional:</strong>
                                 <ul className='list-disc ml-4'>
-                                    <li>Audisi Tahap 3 akan diadakan di Jakarta dari Jumat, 12 Juli 2024, hingga Selasa, 16 Juli 2024.</li>
+                                    <li>Audisi Tahap 3 akan diadakan di Jakarta dari Jumat, 12 Juli 2024 - Selasa, 16 Juli 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi untuk instruksi lebih lanjut.</li>
-                                    <li>Persyaratan dan prosedur audisi mirip dengan Tahap 2.</li>
+                                    <li>Pada audisi tahap ini top 2 dari masing-masing negara akan dikumpulkan untuk berkompetisi kembali untuk menentukan pemenang Top 3</li>
+                                    <li>Persyaratan dan prosedur audisi sama dengan Tahap 2. </li>
+                                    <li>Setelah pemenang diumumkan, pemenang Top 3 akan menjalani Training Offline yang detailnya masih akan diumumkan lebih lanjut. </li>
+                                    <li>Pemenang  Top 3 akan tampil di konser &quot;Kejar Mimpi untuk Indonesia 2024&quot; bersama Andi Rianto dan penyanyi papan atas lainnya pada tanggal 24 Agustus 2024.</li>
                                 </ul>
                             </li>
                         </ul>
 
-                        <p>Setelah itu, pemenang Top 1 akan menjalani Training Offline yang detailnya masih akan diumumkan di Jakarta. Pemenang akan tampil di konser &quot;Kejar Mimpi untuk Indonesia 2024&quot; bersama Andi Rianto dan beberapa penyanyi papan atas pada tanggal 24 Agustus 2024.</p>
+                        <p className='mt-3'>Setelah itu, pemenang Top 1 akan menjalani Training Offline yang detailnya masih akan diumumkan di Jakarta. Pemenang akan tampil di konser &quot;Kejar Mimpi untuk Indonesia 2024&quot; bersama Andi Rianto dan beberapa penyanyi papan atas pada tanggal 24 Agustus 2024.</p>
 
                     </div>
                 </div>
@@ -140,7 +143,7 @@ const FAQ = () => {
                                 </tr>
                                 <tr className='border border-white border-opacity-10'>
                                     <td className='border border-white border-opacity-10'>Pengumuman Lolos Tahap 3 | Top 1</td>
-                                    <td className='border border-white border-opacity-10'>Sabtu, 13 Juli 2024</td>
+                                    <td className='border border-white border-opacity-10'>Sabtu, 27 Juli 2024</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -174,20 +177,12 @@ const FAQ = () => {
                                 <td >-</td>
                             </tr>
                             <tr className='border border-white border-opacity-10'>
-                                <td>Keterangan</td>
-                                <td >Aspek penilaian yang diberlakukan pada tahap awal audisi.</td>
-                            </tr>
-                            <tr className='border border-white border-opacity-10'>
                                 <td >Tahap 2-3</td>
                                 <td>Bobot (%)</td>
                                 <td>40%</td>
                                 <td>20%</td>
                                 <td>20%</td>
                                 <td>20%</td>
-                            </tr>
-                            <tr className='border border-white border-opacity-10'>
-                                <td>Keterangan</td>
-                                <td>Aspek penilaian yang diberlakukan pada tahap lanjutan audisi.</td>
                             </tr>
                             </tbody>
                         </table>
@@ -209,11 +204,11 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                        Di mana konser Kejar Mimpi 2024 akan dilaksanakan?
+                        Di mana Konser Kejar Mimpi untuk Indonesia 2024 akan dilaksanakan?
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                            Konser Kejar Mimpi 2024 akan dilaksanakan di Solo pada tanggal 24 Agustus 2024 dengan jajaran penampilan oleh penyanyi papan atas dari Indonesia
+                        Konser Kejar Mimpi untuk Indonesia 2024 akan dilaksanakan di Surakarta pada tanggal 24 Agustus 2024 dengan jajaran penampilan oleh penyanyi papan atas dari Indonesia.
                         </p>
                     </div>
                 </div>

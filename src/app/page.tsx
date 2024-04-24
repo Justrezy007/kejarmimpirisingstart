@@ -12,7 +12,7 @@ import LiveCount from "./components/liveCount";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-16">
       {/* Fixed Whatsapp */}
       <a className="fixed z-30 bottom-7 shadow-lg cursor-pointer right-10 bg-base-100 w-16 h-16 flex justify-center items-center rounded-full">
         <BsWhatsapp className="w-8 h-8" />

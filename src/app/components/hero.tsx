@@ -9,7 +9,7 @@ const Hero = () => {
 
     return (
         <div id="register" style={{
-            backgroundImage: "url('./KV.JPG')",
+            backgroundImage: "url('./KV.jpg')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
         }} className="hero md:min-h-screen h-[42rem] mx-auto overflow-y-hidden bg-cover bg-center bg-no-repeat shadow-lg">

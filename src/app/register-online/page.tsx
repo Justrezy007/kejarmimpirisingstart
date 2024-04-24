@@ -177,7 +177,7 @@ const RegisterOnline = () => {
 
     return (
         <div style={{
-            backgroundImage: "url('./Long_KV.JPG')",
+            backgroundImage: "url('./KV.jpg')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
         }} className="min-h-screen mx-auto overflow-y-hidden bg-fixed bg-cover bg-center bg-no-repeat shadow-lg">
@@ -282,6 +282,13 @@ const RegisterOnline = () => {
                             <label className='text-xs text-opacity-50' id="city">Dari Mana Anda Memperoleh Informasi?</label>
                             {errors.getInformation && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                             <input {...register("getInformation", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Dari Komunitas/Sosial Media/Lainnya' />
+                        </div>
+
+                        <div className='flex flex-col mt-6 flex-1'>
+                            <p className='text-xs text-opacity-50' >Contoh <i>Screenshot</i> Akun OCTO Pay</p>
+                            <a target='_blank' href='./SS_Octopay.jpeg'>
+                            <img className='w-5/12 mt-2 mx-auto rounded-md' src={'./SS_Octopay.jpeg'} />
+                            </a>
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>

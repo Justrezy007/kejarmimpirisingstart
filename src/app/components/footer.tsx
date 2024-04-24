@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const Footer = () => {
     const path = usePathname()
@@ -16,20 +17,22 @@ const Footer = () => {
 
                 <ul className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                     <li>
-                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#event"> Event </a>
+                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#event"> Tentang Program </a>
                     </li>
 
                     <li>
-                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#register"> Register </a>
+                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#register"> Pendaftaran </a>
                     </li>
 
                     <li>
-                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#timeline"> Timeline </a>
+                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#timeline"> Agenda </a>
                     </li>
 
                     <li>
-                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#contact"> Contact </a>
+                        <a className="text-neutral-content transition hover:text-neutral-content/75" href="#contact"> Kontak </a>
                     </li>
+
+                    <li><Link className='text-neutral-content transition hover:text-neutral-content/75' href='/prize'>Hadiah</Link></li>
 
                     <li>
                         <a className="text-neutral-content transition hover:text-neutral-content/75" href="#faq"> FAQ </a>

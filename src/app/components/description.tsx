@@ -21,17 +21,16 @@ const Description = () => {
     return (
 
         <div id="event" className="bg-base-100 w-full md:w-10/12 flex flex-col md:flex-row mx-auto pt-28 overflow-hidden relative lg:items-center">
-            <div className="flex-1 md:order-1 order-2 py-12 px-8 md:px-6 lg:py-16  z-20">
+            <div className="flex-1 md:order-1 order-2 py-12 px-8 md:px-2 lg:py-16 z-20">
                 <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                     <span className="block">
                     CIMB Niaga Rising Start: <br />Singing Competition 2024
                     </span>
                 </h2>
                 <p className="text-md mt-4 text-gray-300 text-justify">
-                    Kejar Mimpi Rising Start Singing Competition 2024 adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu  &quot;Kejar Mimpimu&quot; karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.
-                </p>
+                Kejar Mimpi Rising Start Singing Competition 2024 adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu "Kejar Mimpimu" karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.                </p>
                 <p className="text-md mt-4 text-gray-300">
-                Tahun ini, Kompetisi Rising Start Singing Competition 2024 diadakan lintas CIMB Group yang terdiri dari negara XXX, XXX, XXX, dan XXX
+                Tahun ini, Kompetisi Rising Start Singing Competition 2024 diadakan lintas negara-negara di Asia Tenggara yang merupakan bagian dari CIMB Group.
                 </p>
                 <p className="text-md mt-4 text-gray-300">
                 Yuk #KejarMimpi bersama CIMB Niaga!
