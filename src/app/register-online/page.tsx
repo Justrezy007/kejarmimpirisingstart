@@ -177,7 +177,7 @@ const RegisterOnline = () => {
 
     return (
         <div style={{
-            backgroundImage: "url('./KV.png')",
+            backgroundImage: "url('./Long_KV.JPG')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
         }} className="min-h-screen mx-auto overflow-y-hidden bg-fixed bg-cover bg-center bg-no-repeat shadow-lg">
@@ -190,9 +190,10 @@ const RegisterOnline = () => {
                     <div className='md:px-12 px-2 mt-8'>
                         <p className='text-sm text-white font-semibold'>Publication Conformation</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya dengan ini memberikan persetujuan untuk mempublikasi material konten yang mengandung keterlibatan saya dalam proses audisi dari Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan diri saya dalam konteks audisi, dan saya dengan sadar memberikan hak kepada CIMB Niaga untuk menggunakan dan mempublikasikan konten tersebut di berbagai media termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya. </p>
-                        <p className='text-white text-sm text-justify my-1.5'>Saya memahami bahwa konten yang dipublikasikan oleh CIMB Niaga dapat dilihat oleh masyarakat luas dan dapat diakses oleh siapa saja di seluruh dunia. Saya juga mengerti bahwa saya tidak akan menerima kompensasi atau penggantian apapun atas penggunaan konten tersebut oleh CIMB Niaga. </p>
-                        <p className='text-white text-sm text-justify my-1.5'>Saya menyatakan bahwa saya memiliki hak untuk memberikan persetujuan ini kepada CIMB Niaga. Saya juga menjamin bahwa konten tersebut tidak melanggar hak cipta, hak privasi, atau hak lainnya dari pihak ketiga. </p>
-                        <p className='text-white text-sm text-justify my-1.5'>Dengan ini, saya menyatakan persetujuan saya secara sukarela dan tanpa paksaan untuk mempublikasikan konten audisi saya dalam talent search CIMB Niaga.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Saya memahami bahwa konten yang dipublikasikan oleh CIMB Niaga dapat dilihat oleh masyarakat luas dan dapat diakses oleh siapa saja di seluruh dunia. Saya juga mengerti bahwa saya tidak akan menerima kompensasi atau penggantian apapun atas penggunaan konten tersebut oleh CIMB Niaga.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Saya menyatakan bahwa saya memiliki hak untuk memberikan persetujuan ini kepada CIMB Niaga. Saya juga menjamin bahwa konten tersebut tidak melanggar hak cipta, hak privasi, atau hak lainnya dari pihak ketiga.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Dengan ini, saya juga menyatakan bahwa saya setuju jika terpilih sebagai salah satu pemenang dari kompetisi ini untuk menjadi model dalam pembuatan music video Kejar Mimpimu - Dee Lestari, mengikuti  seluruh rangkaian audisi serta persiapan hingga penampilan di Konser Kejar Mimpi untuk Indonesia 2024, dan mengikuti rangkaian photoshoot sesuai dengan jadwal yang berlaku termasuk menggunakan assetnya untuk keperluan kalender 2025 CIMB Niaga.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Dengan ini, saya menyatakan persetujuan saya secara sukarela dan tanpa paksaan untuk mempublikasikan konten audisi saya dalam kompetisi ini</p>
                         <input {...register("checked", { required: true })} type="checkbox" className="mt-2 cursor-pointer" /><span className='text-white ml-2 mt-2 text-sm'>Saya Setuju</span> {errors.checked && <span className='text-xs text-red-500'>Required Check</span>}
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
                             <div className='flex flex-col mt-6 flex-1'>
