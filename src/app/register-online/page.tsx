@@ -10,6 +10,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useForm, SubmitHandler } from "react-hook-form"
 import Loading from '../components/loading'
 import dataCity from '@/app/utils/province.json'
+import emailjs from '@emailjs/browser';
 
 interface FormRegistration {
     checked: boolean
@@ -23,6 +24,7 @@ interface FormRegistration {
     tiktok : string
     city: string
     getInformation : string
+    nomorOcto : string
     nomorKtp: string
 }
 
@@ -117,15 +119,34 @@ const RegisterOnline = () => {
         setLoadImage(false)
     }
 
+    // Send Email to user
+    const sendEmail = (receiver:string, confirmation:string) => {
+        emailjs
+            .send(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ?? "",
+                process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ONLINE ?? "",
+                {receiver:receiver, confirmation: confirmation},
+                process.env.NEXT_PUBLIC_EMAIL_API_KEY ?? "")
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
     const onSubmit: SubmitHandler<FormRegistration> = async (data) => {
         setIsLoading(true)
         setErrorSignUp('')
         if (captcha != '') {
+            const timeStamp = Date.now().toString()
             try {
-                const res = await createUserWithEmailAndPassword(data.email, data.password)
+                const res = await createUserWithEmailAndPassword(data.email, timeStamp)
                 if (res?.user) {
-                    const createUser = await createUserToFirestore(res?.user.uid, data);
+                    const createUser = await createUserToFirestore(res?.user.uid, data, timeStamp);
                     sessionStorage.setItem('user', res?.user.uid);
+                    sendEmail(data.email, 'https://www.kejarmimpirisingstart.com/confirmation/'+res?.user.uid)
                     router.push('/profile')
                 } else {
                     throw new Error('User was found');
@@ -145,8 +166,8 @@ const RegisterOnline = () => {
 
 
     // Handle Create Doc based on UID
-    const createUserToFirestore = async (uid: string, data: FormRegistration) => {
-        const { checked, fullName, tempatLahir, tanggalLahir, email, password, phone, instagram, city, nomorKtp, getInformation } = data
+    const createUserToFirestore = async (uid: string, data: FormRegistration, timeStamp:string) => {
+        const { checked, fullName, tempatLahir, tanggalLahir, email, phone, instagram, city, nomorKtp, nomorOcto, getInformation } = data
         try {
             const dataCollection = collection(getFirestore(app), 'user');
             const dataDoc = doc(dataCollection, uid)
@@ -158,14 +179,16 @@ const RegisterOnline = () => {
                 tempatLahir,
                 tanggalLahir,
                 email,
-                password,
                 phone,
                 instagram,
                 city,
                 nomorKtp,
                 profilePict,
                 proveOcto,
+                nomorOcto,
                 getInformation,
+                verified: 'false',
+                timeStamp:timeStamp,
                 createdAt: Timestamp.now()
             })
         }
@@ -225,11 +248,11 @@ const RegisterOnline = () => {
                                 {errors.email && <p className='text-xs text-red-500'>Required 3-100 characters</p>}
                                 <input {...register("email", { required: true, minLength: 3, maxLength: 100 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='email' placeholder='email@gmail.com' />
                             </div>
-                            <div className='flex flex-col mt-6 flex-1'>
+                            {/* <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="password">Password</label>
                                 {errors.password && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                                 <input {...register("password", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='password' placeholder='********' />
-                            </div>
+                            </div> */}
                         </div>
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
                             <div className='flex flex-col mt-6 flex-1'>
@@ -276,6 +299,12 @@ const RegisterOnline = () => {
                             <p className='text-xs text-red-500'>{errProveOcto}</p>
                             <label className='text-xs text-opacity-50' id="city">Foto Bukti Akun OCTO Pay</label>
                             <input required onChange={e=>handleUploadProve(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
+                        </div>
+
+                        <div className='flex flex-col mt-6 flex-1'>
+                            <label className='text-xs text-opacity-50' id="city">Nomor Octopay</label>
+                            {errors.nomorOcto && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                            <input {...register("nomorOcto", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='32111111111' />
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
