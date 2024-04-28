@@ -26,6 +26,7 @@ interface FormRegistration {
     getInformation : string
     nomorOcto : string
     nomorKtp: string
+    linkVideo: string
 }
 
 interface City {
@@ -120,11 +121,11 @@ const RegisterOnline = () => {
     }
 
     // Send Email to user
-    const sendEmail = (receiver:string, confirmation:string) => {
+    const sendEmail = (receiver:string) => {
         emailjs
             .send(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ?? "",
                 process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ONLINE ?? "",
-                {receiver:receiver, confirmation: confirmation},
+                {receiver:receiver},
                 process.env.NEXT_PUBLIC_EMAIL_API_KEY ?? "")
             .then(
                 () => {
@@ -146,7 +147,7 @@ const RegisterOnline = () => {
                 if (res?.user) {
                     const createUser = await createUserToFirestore(res?.user.uid, data, timeStamp);
                     sessionStorage.setItem('user', res?.user.uid);
-                    sendEmail(data.email, 'https://www.kejarmimpirisingstart.com/confirmation/'+res?.user.uid)
+                    sendEmail(data.email)
                     router.push('/profile')
                 } else {
                     throw new Error('User was found');
@@ -167,7 +168,7 @@ const RegisterOnline = () => {
 
     // Handle Create Doc based on UID
     const createUserToFirestore = async (uid: string, data: FormRegistration, timeStamp:string) => {
-        const { checked, fullName, tempatLahir, tanggalLahir, email, phone, instagram, city, nomorKtp, nomorOcto, getInformation } = data
+        const { checked, fullName, tempatLahir, tanggalLahir, email, phone, instagram, city, nomorKtp, nomorOcto, getInformation, linkVideo } = data
         try {
             const dataCollection = collection(getFirestore(app), 'user');
             const dataDoc = doc(dataCollection, uid)
@@ -189,6 +190,7 @@ const RegisterOnline = () => {
                 getInformation,
                 verified: 'false',
                 timeStamp:timeStamp,
+                linkVideo,
                 createdAt: Timestamp.now()
             })
         }
@@ -211,7 +213,7 @@ const RegisterOnline = () => {
                     {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3> */}
                     <h3 className='font-semibold text-lg mt-1 text-center text-white'>PENDAFTARAN AUDISI ONLINE</h3>
                     <div className='md:px-12 px-2 mt-8'>
-                        <p className='text-sm text-white font-semibold'>Publication Conformation</p>
+                        <p className='text-sm text-white font-semibold'>Publication Confirmation</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya dengan ini memberikan persetujuan untuk mempublikasi material konten yang mengandung keterlibatan saya dalam proses audisi dari Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan diri saya dalam konteks audisi, dan saya dengan sadar memberikan hak kepada CIMB Niaga untuk menggunakan dan mempublikasikan konten tersebut di berbagai media termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya. </p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya memahami bahwa konten yang dipublikasikan oleh CIMB Niaga dapat dilihat oleh masyarakat luas dan dapat diakses oleh siapa saja di seluruh dunia. Saya juga mengerti bahwa saya tidak akan menerima kompensasi atau penggantian apapun atas penggunaan konten tersebut oleh CIMB Niaga.</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya menyatakan bahwa saya memiliki hak untuk memberikan persetujuan ini kepada CIMB Niaga. Saya juga menjamin bahwa konten tersebut tidak melanggar hak cipta, hak privasi, atau hak lainnya dari pihak ketiga.</p>
@@ -278,6 +280,13 @@ const RegisterOnline = () => {
                                 <input {...register("instagram", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='@risingstart2024' />
                             </div>
                         </div>
+                        <div className='flex flex-col md:flex-row justify-between md:gap-5'>
+                            <div className='flex flex-col mt-6 flex-1'>
+                                <label className='text-xs text-opacity-50' id="linkVideo">Link Video</label>
+                                {errors.linkVideo && <p className='text-xs text-red-500'>Required 3-100 characters</p>}
+                                <input {...register("linkVideo", { required: true, minLength: 3, maxLength: 100 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='https://instagram.com/o' />
+                            </div>
+                        </div>
                         <div className='flex flex-col mt-6 flex-1'>
                             <label className='text-xs text-opacity-50' id="city">Asal Kota</label>
                             {errors.city && <p className='text-xs text-red-500'>Pilih Kota yang tersedia</p>}
@@ -296,21 +305,15 @@ const RegisterOnline = () => {
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <p className='text-xs text-red-500'>{errProveOcto}</p>
-                            <label className='text-xs text-opacity-50' id="city">Foto Bukti Akun OCTO Pay</label>
-                            <input required onChange={e=>handleUploadProve(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
-                        </div>
-
-                        <div className='flex flex-col mt-6 flex-1'>
                             <label className='text-xs text-opacity-50' id="city">Nomor Octopay</label>
                             {errors.nomorOcto && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                             <input {...register("nomorOcto", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='32111111111' />
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <label className='text-xs text-opacity-50' id="city">Dari Mana Anda Memperoleh Informasi?</label>
-                            {errors.getInformation && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                            <input {...register("getInformation", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Dari Komunitas/Sosial Media/Lainnya' />
+                            <p className='text-xs text-red-500'>{errProveOcto}</p>
+                            <label className='text-xs text-opacity-50' id="city">Foto Bukti Akun OCTO Pay dengan Minimum Deposit Rp10.000</label>
+                            <input required onChange={e=>handleUploadProve(e)} type="file" accept='image/*'  className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />                        
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
@@ -319,6 +322,13 @@ const RegisterOnline = () => {
                             <img className='w-5/12 mt-2 mx-auto rounded-md' src={'./SS_Octopay.jpeg'} />
                             </a>
                         </div>
+
+                        <div className='flex flex-col mt-6 flex-1'>
+                            <label className='text-xs text-opacity-50' id="city">Dari Mana Anda Memperoleh Informasi?</label>
+                            {errors.getInformation && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                            <input {...register("getInformation", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Dari Komunitas/Sosial Media/Lainnya' />
+                        </div>
+
 
                         <div className='flex flex-col mt-6 flex-1'>
                             {errCaptcha && <p className='text-xs text-red-500 text-center mb-2'>verifikasi diperlukan!</p>}

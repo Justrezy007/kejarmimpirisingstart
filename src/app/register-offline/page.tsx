@@ -107,7 +107,7 @@ const RegisterOffline = () => {
     }
 
     // Send Email to user
-    const sendEmail = (city: string, receiver: string, lokasi: string, map: string, date: string, time: string, hastag: string, confirmation:string) => {
+    const sendEmail = (city: string, receiver: string, lokasi: string, map: string, date: string, time: string, hastag: string) => {
 
         const email_params = {
             city: city,
@@ -116,9 +116,7 @@ const RegisterOffline = () => {
             map: map,
             date: date,
             time: time,
-            hastag: hastag,
-            confirmation: confirmation
-        }
+            hastag: hastag,        }
 
         emailjs
             .send(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ?? "",
@@ -147,9 +145,9 @@ const RegisterOffline = () => {
                 if (res?.user) {
                     const createUser = await createUserToFirestore(res?.user.uid, data, timeStamp);
                     sessionStorage.setItem('user', res?.user.uid);
-                    if(data.city == 'manado') sendEmail(data.city,data.email,'Bumi Beringin Resto Jl. Brigjend Katamso Lrg. Lingkungan 5, Bumi Beringin, Kec. Wenang, Kota Manado, Sulawesi Utara', 'https://g.co/kgs/xAj7FcQ', 'Sabtu, 18 April 2024','08.00 - 17.00 WITA','#RisingStartManado','https://www.kejarmimpirisingstart.com/confirmation/'+res?.user.uid)
-                    if(data.city == 'jogja') sendEmail(data.city,data.email,'De Freshco Resto Jl. Magelang, Rogoyudan, Sinduadi, Mlati, Sleman, Yogyakarta', 'https://maps.app.goo.gl/HmwthN3Uo1wxgDDT8', 'Sabtu, 1 Juni 2024','08.00 - 17.00 WIB','#RisingStartYogyakarta','https://www.kejarmimpirisingstart.com/confirmation/'+res?.user.uid)
-                    if(data.city == 'jakarta') sendEmail(data.city,data.email,'CIMB Niaga Pondok Indah Icon Office Park Gedung A Unit GF 01 & 101 Sektor 3, Jl. Metro Pondok Indah, RT.1/RW.16, Pondok Indah', 'https://maps.app.goo.gl/2wnx9QY3bYrL28kF9', 'Sabtu, 15 Juni 2024','08.00 - 17.00 WIB','#RisingStartJakarta','https://www.kejarmimpirisingstart.com/confirmation/'+res?.user.uid)
+                    if(data.city == 'manado') sendEmail(data.city,data.email,'Bumi Beringin Resto Jl. Brigjend Katamso Lrg. Lingkungan 5, Bumi Beringin, Kec. Wenang, Kota Manado, Sulawesi Utara', 'https://g.co/kgs/xAj7FcQ', 'Sabtu, 18 April 2024','08.00 - 17.00 WITA','#RisingStartManado')
+                    if(data.city == 'jogja') sendEmail(data.city,data.email,'De Freshco Resto Jl. Magelang, Rogoyudan, Sinduadi, Mlati, Sleman, Yogyakarta', 'https://maps.app.goo.gl/HmwthN3Uo1wxgDDT8', 'Sabtu, 1 Juni 2024','08.00 - 17.00 WIB','#RisingStartYogyakarta')
+                    if(data.city == 'jakarta') sendEmail(data.city,data.email,'CIMB Niaga Pondok Indah Icon Office Park Gedung A Unit GF 01 & 101 Sektor 3, Jl. Metro Pondok Indah, RT.1/RW.16, Pondok Indah', 'https://maps.app.goo.gl/2wnx9QY3bYrL28kF9', 'Sabtu, 15 Juni 2024','08.00 - 17.00 WIB','#RisingStartJakarta')
                     router.push('/profile')
                 } else {
                     setIsLoading(false)
@@ -218,7 +216,7 @@ const RegisterOffline = () => {
                     {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3> */}
                     <h3 className='font-semibold text-lg mt-1 text-center text-white'>PENDAFTARAN AUDISI OFFLINE</h3>
                     <div className='md:px-12 px-2 mt-8'>
-                        <p className='text-sm text-white font-semibold'>Publication Conformation</p>
+                        <p className='text-sm text-white font-semibold'>Publication Confirmation</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya dengan ini memberikan persetujuan untuk mempublikasi material konten yang mengandung keterlibatan saya dalam proses audisi dari Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan diri saya dalam konteks audisi, dan saya dengan sadar memberikan hak kepada CIMB Niaga untuk menggunakan dan mempublikasikan konten tersebut di berbagai media termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya. </p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya memahami bahwa konten yang dipublikasikan oleh CIMB Niaga dapat dilihat oleh masyarakat luas dan dapat diakses oleh siapa saja di seluruh dunia. Saya juga mengerti bahwa saya tidak akan menerima kompensasi atau penggantian apapun atas penggunaan konten tersebut oleh CIMB Niaga.</p>
                         <p className='text-white text-sm text-justify my-1.5'>Saya menyatakan bahwa saya memiliki hak untuk memberikan persetujuan ini kepada CIMB Niaga. Saya juga menjamin bahwa konten tersebut tidak melanggar hak cipta, hak privasi, atau hak lainnya dari pihak ketiga.</p>
@@ -298,22 +296,15 @@ const RegisterOffline = () => {
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <p className='text-xs text-red-500'>{errProveOcto}</p>
-                            <label className='text-xs text-opacity-50' id="city">Foto Bukti Akun OCTO Pay</label>
-                            <input required onChange={e => handleUploadProve(e)} type="file" accept='image/*' className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />
-                        </div>
-
-                        <div className='flex flex-col mt-6 flex-1'>
                             <label className='text-xs text-opacity-50' id="city">Nomor Octopay</label>
                             {errors.nomorOcto && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                             <input {...register("nomorOcto", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='32111111111' />
                         </div>
 
-
                         <div className='flex flex-col mt-6 flex-1'>
-                            <label className='text-xs text-opacity-50' id="city">Dari Mana Anda Memperoleh Informasi?</label>
-                            {errors.getInformation && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
-                            <input {...register("getInformation", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Dari Komunitas/Sosial Media/Lainnya' />
+                            <p className='text-xs text-red-500'>{errProveOcto}</p>
+                            <label className='text-xs text-opacity-50' id="city">Foto Bukti Akun OCTO Pay dengan Minimum Deposit Rp10.000</label>
+                            <input required onChange={e => handleUploadProve(e)} type="file" accept='image/*' className="file-input mt-1 file-input-bordered file-input-red-700 w-full" />
                         </div>
 
 
@@ -324,6 +315,11 @@ const RegisterOffline = () => {
                             </a>
                         </div>
 
+                        <div className='flex flex-col mt-6 flex-1'>
+                            <label className='text-xs text-opacity-50' id="city">Dari Mana Anda Memperoleh Informasi?</label>
+                            {errors.getInformation && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
+                            <input {...register("getInformation", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='Dari Komunitas/Sosial Media/Lainnya' />
+                        </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
                             {errCaptcha && <p className='text-xs text-red-500 text-center mb-2'>verifikasi diperlukan!</p>}
