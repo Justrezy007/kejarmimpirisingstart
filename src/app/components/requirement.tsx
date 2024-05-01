@@ -49,9 +49,9 @@ const Requirement = () => {
                     <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
                         <h3 className="font-bold text-lg mt-6">Ketentuan Skema Online</h3>
                         <ul className="list-disc">
-                            <li className='my-2'>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari (Indonesia Version) dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
+                            <li className='my-2'>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari versi Indonesia dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
                             <li className='my-2'>Dalam pembuatan video, boleh menggunakan instrumen dan dilarang dalam menggunakan filter suara atau mixing. Jangan lupa disertai tampilan video yang memperlihatkan wajah secara keseluruhan</li>
-                            <li className='my-2'>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi pemenang. Gunakan Hashtag #RisingStartSinger, tag @cimb_niaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum.</li>
+                            <li className='my-2'>Perkenalkan secara singkat diri peserta dalam caption serta alasan mengapa ingin terpilih menjadi pemenang. Gunakan Hashtag #RisingStartSinger serta #KejarMimpi, tag @cimb_niaga & @kejarmimpi.id, serta pastikan akun sosial media telah terbuka secara umum.</li>
                             <li className='my-2'>Apabila video sudah dipublikasi, registrasikan diri peserta di link cimb.id/RisingStart dengan data yang sesuai dengan identitas dan jangan lupa untuk melampirkan bukti upload sesuai dengan prosedur pada form.</li>
                         </ul>
                         <div className="modal-action">
@@ -72,8 +72,8 @@ const Requirement = () => {
                 <ul className='list-disc ml-4'>
                     <li className='my-1'>Berkewarganegaraan Indonesia dengan rentang usia 12 - 40 tahun</li>
                     <li className='my-1'>Peserta wajib memiliki akun OCTO Pay di OCTO Mobile dengan minimal deposit Rp10.000</li>
-                    <li className='my-1'>Peserta hanya diperbolehkan untuk mengikuti kompetisi dalam satu skema SAJA (offline/online)</li>
-                    <li className='my-1'>Peserta yang berdomisili di kota tempat Skema offline dilaksanakan (Manado, Jogja, dan Jakarta), wajib mengikuti kompetisi secara offline. Apabila kuota kompetisi offline dalam domisili tersebut telah habis, maka diperbolehkan untuk melakukan kompetisi secara online</li>
+                    <li className='my-1'>Peserta hanya diperbolehkan untuk mengikuti kompetisi dalam satu skema SAJA (<i>offline/online</i>)</li>
+                    <li className='my-1'>Peserta yang berdomisili di kota tempat Skema <i>offline</i> dilaksanakan (Manado, Jogja, dan Jakarta), wajib mengikuti kompetisi secara <i>offline</i>. Apabila kuota kompetisi <i>offline</i> dalam domisili tersebut telah habis, maka diperbolehkan untuk melakukan kompetisi secara <i>online</i></li>
                 </ul>
                 <div className='mt-4 flex flex-row flex-wrap gap-5'>
                     <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>

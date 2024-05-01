@@ -68,14 +68,14 @@ const Profile = () => {
     
 
     return (
-        <div className="bg-white shadow-lg rounded-2xl w-full dark:bg-gray-800">
+        <div className="bg-white shadow-lg rounded-2xl w-full ">
             {/* Pop Up Editor */}
             <img alt="profil" src="/BGProfile.jpg" className="w-full mb-4 object-cover rounded-t-lg h-80" />
             <div className="flex flex-col items-center justify-center p-4 -mt-24">
                 <div className="relative block">
-                    <img alt="profil" src="/avatar_boy.png" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white dark:border-gray-800" />
+                    <img alt="profil" src="/avatar_boy.png" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white" />
                 </div>
-                <p className="mt-2 text-xl font-medium text-gray-800 dark:text-white">
+                <p className="mt-2 text-xl font-medium text-gray-800">
                     {fullName}
                 </p>
                 <p className="mb-4 text-xs text-gray-400 capitalize">
@@ -83,35 +83,35 @@ const Profile = () => {
                 </p>
                 <p className='text-2xl mt-8 font-semibold text-white'>Selamat Anda Sudah Terdaftar Sebagai Berikut</p>
                 <div className="md:w-5/12 w-full mx-auto p-2 mt-4 rounded-lg bg-slate-900 px-12 py-8">
-                    <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
+                    <div className="flex items-center justify-between text-sm text-gray-600">
                         <div className='flex-1'>
                             <p className="flex flex-col">
                                 Nama
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {fullName}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 No. Telp
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {phone}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Instagram
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {instagram}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Nomor KTP
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {ktp}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Nomor Octopay
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {octopay}
                                 </span>
                             </p>
@@ -119,25 +119,25 @@ const Profile = () => {
                         <div className='flex-1'>
                             <p className="flex flex-col">
                                 Tempat, Tanggal Lahir
-                                <span className="font-bold text-black dark:text-white capitalize">
+                                <span className="font-bold text-black capitalize">
                                     {tempatLahir},{tanggalLahir}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Email
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {email}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Tiktok
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {instagram}
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
                                 Kota Asal
-                                <span className="font-bold text-black dark:text-white capitalize">
+                                <span className="font-bold text-black capitalize">
                                     {city}
                                 </span>
                             </p>
@@ -145,7 +145,7 @@ const Profile = () => {
                             
                             <p className="flex flex-col mt-4">
                                 Link Video
-                                <span className="font-bold text-black dark:text-white">
+                                <span className="font-bold text-black">
                                     {linkVideo}
                                 </span>
                             </p>
@@ -153,7 +153,7 @@ const Profile = () => {
                             }
                         </div>
                     </div>
-                    <p className='mt-8 text-rose-500'>*Periksa inbox e-mail Anda dan unduh e-ticket audisi offline</p>
+                    <p className='mt-8 text-rose-500'>*Periksa Inbox e-mail Anda untuk Mendapat Detail Audisi Offline dan Bergabung dalam Grup Whatsapp Peserta</p>
                     <div className='flex justify-end'>
                         {/* <button onClick={e => setEditor(!editor)} className='px-8 py-1.5 bg-red-700 mt-8'>Ubah Data</button>      */}
                         <button onClick={e=> handleSignOut(e)}className='text-white bg-red-700 px-8 py-2 mt-8 rounded'>Kembali</button>

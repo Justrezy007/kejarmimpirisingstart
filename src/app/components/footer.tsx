@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-neutral-content">
                 <a className="btn btn-ghost text-xl">
-                    <img className='w-48' src={'/Logo.svg'} />
+                    <img className='w-48' src={'/cimb_niaga.png'} />
                 </a>
                 </div>
 

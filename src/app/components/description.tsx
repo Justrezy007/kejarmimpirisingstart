@@ -1,22 +1,22 @@
 'use client'
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Description = () => {
     const [count, setCount] = useState<number>(0)
 
-    const imageShow = ["DSC06639.JPG", "DSC06474.JPG", "DSC00002.jpeg", "DSC00001.jpeg", "DSC06652.JPG"]
+    const imageShow = ["DSC06639.JPG", "DSC06474.JPG", "DSC00002.jpeg", "DSC06652.JPG"]
 
     useEffect(() => {
         if (count < imageShow.length) {
-          const timer = setTimeout(() => {
-            setCount(count + 1);
-          }, 1500); 
-          return () => clearTimeout(timer);
+            const timer = setTimeout(() => {
+                setCount(count + 1);
+            }, 1500);
+            return () => clearTimeout(timer);
         }
-        else{
+        else {
             setCount(0)
         }
-      }, [count, imageShow.length]);
+    }, [count, imageShow.length]);
 
     return (
 
@@ -24,16 +24,17 @@ const Description = () => {
             <div className="flex-1 md:order-1 order-2 py-12 px-8 md:px-2 lg:py-16 z-20">
                 <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                     <span className="block">
-                    CIMB Niaga Rising Start: <br />Singing Competition 2024
+                        CIMB Niaga Rising Start: <br />Singing Competition 2024
                     </span>
                 </h2>
                 <p className="text-md mt-4 text-gray-300 text-justify">
-                Kejar Mimpi Rising Start Singing Competition 2024 adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu &ldquo;Kejar Mimpimu&ldquo; karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024 pada bulan Agustus 2024 mendatang.                </p>
-                <p className="text-md mt-4 text-gray-300">
-                Tahun ini, Kompetisi Rising Start Singing Competition 2024 diadakan lintas negara-negara di Asia Tenggara yang merupakan bagian dari CIMB Group.
+                    Kejar Mimpi Rising Start Singing Competition 2024 adalah salah satu aktivasi program Kejar Mimpi, dimana CIMB Niaga mencari penyanyi bertalenta di seluruh Indonesia. Pemenang akan berkesempatan untuk menyanyikan lagu “Kejar Mimpimu“ karya Dee Lestari bersama Andi Rianto dan penyanyi papan atas Indonesia di konser Kejar Mimpi untuk Indonesia 2024
                 </p>
                 <p className="text-md mt-4 text-gray-300">
-                Yuk #KejarMimpi bersama CIMB Niaga!
+                    Tahun ini, Kompetisi Rising Start Singing Competition akan diadakan lintas negara-negara di ASEAN yang merupakan bagian dari CIMB Group.
+                </p>
+                <p className="text-md mt-4 text-gray-300">
+                    Yuk #KejarMimpi bersama CIMB Niaga!                
                 </p>
             </div>
             <div className="flex justify-center md:order-2 order-1 flex-1 items-center gap-2 lg:p-24">

@@ -15,106 +15,106 @@ const Prize = () => {
               <table className='min-w-full leading-normal'>
                 <thead>
                   <tr>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Urutan Juara</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tabungan CIMB Niaga</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di Konser Kejar Mimpi untuk Indonesia 2024 di Surakarta dengan penyanyi papan atas Indonesia</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Menjadi talent dalam pembuatan Music Video Kejar Mimpimu - Dee Lestari (English Version)</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tiket Gratis Nonton Konser Kejar Mimpi 2024 (Exclude Akomodasi)</th>
-                    <th scope="col" className="px-5 py-3 text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Terhighlight dalam kalender CIMB Niaga 2025</th>
+                    <th scope="col" className="px-5 py-3 border text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Urutan Juara</th>
+                    <th scope="col" className="px-5 py-3 border text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tabungan CIMB Niaga</th>
+                    <th scope="col" className="px-5 py-3 border text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Kesempatan tampil di Konser Kejar Mimpi untuk Indonesia 2024 di Surakarta dengan penyanyi papan atas Indonesia</th>
+                    <th scope="col" className="px-5 py-3 border text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Menjadi talent dalam pembuatan Music Video Kejar Mimpimu - Dee Lestari (English Version)</th>
+                    <th scope="col" className="px-5 py-3 border text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Tiket Gratis Nonton Konser Kejar Mimpi 2024 (Exclude Akomodasi)</th>
+                    <th scope="col" className="px-5 py-3 border text-sm font-semibold text-gray-800 uppercase bg-white border-b border-gray-200 text-center">Terhighlight dalam kalender CIMB Niaga 2025</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>1</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Rp35.000.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2 Tiket</p></td>
-                      <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
 
                   <tr className='text-center'>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Rp25.000.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2 Tiket</p></td>
-                      <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                      <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
 
                   <tr className='text-center'>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>3</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Rp15.000.000</p></td>
-                      <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>2 Tiket</p></td>
-                      <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                      <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
                   <tr className='text-center'>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Top Regional</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>Rp3.500.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Rp3.500.000</p><p className='text-xs text-gray-900'>*untuk Masing-masing pemenang</p></td>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
                   </tr>
                   <tr className='text-center'>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>Top 10 Indonesia</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>Rp1.500.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Top 2 Indonesia</p></td>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Rp10.00.000</p><p className='text-xs text-gray-900'>*untuk Masing-masing pemenang</p></td>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>✅</p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-slate-100 border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'></p></td>
                   </tr>
                   <tr className='text-center'>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>Top 2 Indonesia</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>Rp5.000.000</p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Top 10 Indonesia</p></td>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
+                      <p className='text-gray-900 whitespace-no-wrap'>Rp2.500.000</p><p className='text-xs text-gray-900'>*untuk Masing-masing pemenang</p></td>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
-                    <td className='px-5 py-5 text-sm bg-white border-b border-gray-200 text-center'>
+                    <td className='px-5 py-5 text-sm border bg-white border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'></p></td>
                   </tr> 
                 </tbody>

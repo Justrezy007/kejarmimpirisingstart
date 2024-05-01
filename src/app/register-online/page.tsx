@@ -317,7 +317,7 @@ const RegisterOnline = () => {
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <p className='text-xs text-opacity-50' >Contoh <i>Screenshot</i> Akun OCTO Pay</p>
+                            <p className='text-xs text-opacity-50' >Contoh foto yang dilampirkan</p>
                             <a target='_blank' href='./SS_Octopay.jpeg'>
                             <img className='w-5/12 mt-2 mx-auto rounded-md' src={'./SS_Octopay.jpeg'} />
                             </a>
