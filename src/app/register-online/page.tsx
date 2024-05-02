@@ -213,13 +213,12 @@ const RegisterOnline = () => {
                     {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3> */}
                     <h3 className='font-semibold text-lg mt-1 text-center text-white'>PENDAFTARAN AUDISI ONLINE</h3>
                     <div className='md:px-12 px-2 mt-8'>
-                        <p className='text-sm text-white font-semibold'>Publication Confirmation</p>
-                        <p className='text-white text-sm text-justify my-1.5'>Saya dengan ini memberikan persetujuan untuk mempublikasi material konten yang mengandung keterlibatan saya dalam proses audisi dari Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan diri saya dalam konteks audisi, dan saya dengan sadar memberikan hak kepada CIMB Niaga untuk menggunakan dan mempublikasikan konten tersebut di berbagai media termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya. </p>
-                        <p className='text-white text-sm text-justify my-1.5'>Saya memahami bahwa konten yang dipublikasikan oleh CIMB Niaga dapat dilihat oleh masyarakat luas dan dapat diakses oleh siapa saja di seluruh dunia. Saya juga mengerti bahwa saya tidak akan menerima kompensasi atau penggantian apapun atas penggunaan konten tersebut oleh CIMB Niaga.</p>
-                        <p className='text-white text-sm text-justify my-1.5'>Saya menyatakan bahwa saya memiliki hak untuk memberikan persetujuan ini kepada CIMB Niaga. Saya juga menjamin bahwa konten tersebut tidak melanggar hak cipta, hak privasi, atau hak lainnya dari pihak ketiga.</p>
-                        <p className='text-white text-sm text-justify my-1.5'>Dengan ini, saya juga menyatakan bahwa saya setuju jika terpilih sebagai salah satu pemenang dari kompetisi ini untuk menjadi model dalam pembuatan music video Kejar Mimpimu - Dee Lestari, mengikuti  seluruh rangkaian audisi serta persiapan hingga penampilan di Konser Kejar Mimpi untuk Indonesia 2024, dan mengikuti rangkaian photoshoot sesuai dengan jadwal yang berlaku termasuk menggunakan assetnya untuk keperluan kalender 2025 CIMB Niaga.</p>
-                        <p className='text-white text-sm text-justify my-1.5'>Dengan ini, saya menyatakan persetujuan saya secara sukarela dan tanpa paksaan untuk mempublikasikan konten audisi saya dalam kompetisi ini</p>
-                        <input {...register("checked", { required: true })} type="checkbox" className="mt-2 cursor-pointer" /><span className='text-white ml-2 mt-2 text-sm'>Saya Setuju</span> {errors.checked && <span className='text-xs text-red-500'>Required Check</span>}
+                    <p className='text-sm text-white font-semibold'>Publication Confirmation</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Saya memberikan izin kepada PT CIMB Niaga Tbk untuk melakukan publikasi terhadap materi konten yang mencakup partisipasi saya dalam keseluruhan proses audisi Rising Start CIMB Niaga. Saya mengerti bahwa konten tersebut dapat berupa video, audio, foto, atau tulisan yang menampilkan atau menggambarkan saya dalam konteks audisi. Saya dengan sadar memberikan hak kepada PT Bank CIMB Niaga Tbk untuk menggunakan dan mempublikasikan konten tersebut di berbagai media, termasuk namun tidak terbatas pada media sosial, website, iklan, dan publikasi lainnya.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Saya menyadari bahwa konten yang dipublikasikan oleh PT Bank CIMB Niaga Tbk dapat diakses oleh masyarakat luas di seluruh dunia. Saya juga memahami bahwa saya tidak akan menerima kompensasi atau penggantian atas penggunaan konten tersebut oleh PT Bank CIMB Niaga Tbk.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Saya mengonfirmasi bahwa saya memiliki hak untuk memberikan izin ini kepada PT Bank CIMB Niaga Tbk, dan saya menjamin bahwa konten tersebut tidak melanggar hak cipta, privasi, atau hak lainnya dari pihak yang bersangkutan.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Selain itu,  apabila terpilih sebagai pemenang tahap 2 & 3 dari proses kompetisi ini , saya setuju untuk menjadi model dalam pembuatan video musik 'Kejar Mimpimu' oleh Dee Lestari, bersedia mengikuti seluruh rangkaian audisi, persiapan, dan penampilan di Konser Kejar Mimpi untuk Indonesia 2024 hingga selesai, serta rangkaian photoshoot sesuai dengan jadwal yang berlaku dengan penggunaan assetnya untuk kalender 2025 CIMB Niaga.</p>
+                        <p className='text-white text-sm text-justify my-1.5'>Dengan ini, saya menyatakan persetujuan saya secara sukarela dan tanpa paksaan dari pihak manapun.</p>         <input {...register("checked", { required: true })} type="checkbox" className="mt-2 cursor-pointer" /><span className='text-white ml-2 mt-2 text-sm'>Saya Setuju</span> {errors.checked && <span className='text-xs text-red-500'>Required Check</span>}
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
                             <div className='flex flex-col mt-6 flex-1'>
                                 <label className='text-xs text-opacity-50' id="first-name">Nama Lengkap </label>
@@ -263,7 +262,7 @@ const RegisterOnline = () => {
                                 <input {...register("phone", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='08111111111' />
                             </div>
                             <div className='flex flex-col mt-6 flex-1'>
-                                <label className='text-xs text-opacity-50' id="ktp">Nomor KTP</label>
+                                <label className='text-xs text-opacity-50' id="ktp">Nomor KTP/KK</label>
                                 {errors.nomorKtp && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                                 <input {...register("nomorKtp", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='3312412312421' />
                             </div>
@@ -282,7 +281,7 @@ const RegisterOnline = () => {
                         </div>
                         <div className='flex flex-col md:flex-row justify-between md:gap-5'>
                             <div className='flex flex-col mt-6 flex-1'>
-                                <label className='text-xs text-opacity-50' id="linkVideo">Link Video</label>
+                                <label className='text-xs text-opacity-50' id="linkVideo">Link Video (Instagram/Tiktok)</label>
                                 {errors.linkVideo && <p className='text-xs text-red-500'>Required 3-100 characters</p>}
                                 <input {...register("linkVideo", { required: true, minLength: 3, maxLength: 100 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='https://instagram.com/o' />
                             </div>
@@ -305,7 +304,7 @@ const RegisterOnline = () => {
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <label className='text-xs text-opacity-50' id="city">Nomor Octopay</label>
+                            <label className='text-xs text-opacity-50' id="city">Nomor Octo Pay</label>
                             {errors.nomorOcto && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                             <input {...register("nomorOcto", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='32111111111' />
                         </div>

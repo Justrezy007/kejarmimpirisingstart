@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { usePathname } from 'next/navigation'
+import { MdLocalPhone } from "react-icons/md";
 import Link from 'next/link'
 
 const Footer = () => {
@@ -8,11 +9,14 @@ const Footer = () => {
     if(path === '/' || path === '/prize')
     return (
         <footer id="contact" className="bg-base-300">
-            <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-5xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-neutral-content">
                 <a className="btn btn-ghost text-xl">
                     <img className='w-48' src={'/cimb_niaga.png'} />
                 </a>
+                </div>
+                <div className='text-gray-900 mx-auto text-center mt-6'>
+                    <p className='text-center bg-white px-8 py-1.5 inline-flex items-center rounded-full text-md'><MdLocalPhone /><span className='ml-2'>Call Center 14041</span></p>
                 </div>
 
                 <ul className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
@@ -94,6 +98,9 @@ const Footer = () => {
                     </li>
 
                 </ul>
+            </div>
+            <div className=''>
+                <p className='text-center text-xs py-2'>PT Bank CIMB Niaga Tbk berizin &amp; diawasi oleh Otoritas Jasa Keuangan &amp; Bank Indonesia serta merupakan Peserta Penjaminan LPS</p>
             </div>
         </footer>
     )
