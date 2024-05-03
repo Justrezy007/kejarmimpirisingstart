@@ -285,7 +285,7 @@ const RegisterOffline = () => {
                             <select className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' {...register("city", { required: true })}>
                                 <option value={"jakarta"}>Jakarta</option>
                                 <option value={"manado"}>Manado</option>
-                                <option value={"jogja"}>Jogja</option>
+                                <option value={"jogja"}>Yogyakarta</option>
                             </select>
                             {/* <input {...register("city",{required:true, minLength:3, maxLength:20})} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1'  type='text' placeholder='Jakarta'  /> */}
                         </div>

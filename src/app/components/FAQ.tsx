@@ -68,22 +68,22 @@ const FAQ = () => {
                                     <p>Registrasi &amp; Audisi berlangsung dari Senin, 6 Mei 2024 - Kamis, 20 Juni 2024.</p>
                                     <li className='mt-3'><strong className='font-semibold'>Audisi Offline:</strong>
                                         <ul className='list-disc ml-4'>
-                                            <li>Manado:
+                                            <li>Yogjakarta:
                                                 <ul>
                                                     <li>Registrasi: Senin, 6 Mei 2024 - Selasa, 14 Mei 2024</li>
                                                     <li>Audisi: Sabtu, 18 Mei 2024</li>
                                                 </ul>
                                             </li>
-                                            <li>Jogjakarta:
+                                            <li>Jakarta:
                                                 <ul>
                                                     <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 25 Mei 2024</li>
                                                     <li>Audisi: Sabtu, 1 Juni 2024</li>
                                                 </ul>
                                             </li>
-                                            <li>Jakarta:
+                                            <li>Manado:
                                                 <ul>
-                                                    <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 8 Juni 2024</li>
-                                                    <li>Audisi: Sabtu, 15 Juni 2024</li>
+                                                    <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 1 Juni 2024</li>
+                                                    <li>Audisi: Sabtu, 8 Juni 2024</li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -136,7 +136,7 @@ const FAQ = () => {
                                 </tr>
                                 <tr className='border border-white border-opacity-10'>
                                     <td className='border border-white border-opacity-10'>Pengumuman Lolos Tahap 2 | Top 2 Indonesia</td>
-                                    <td className='border border-white border-opacity-10'>Sabtu, 6 Juli 2024</td>
+                                    <td className='border border-white border-opacity-10'>Sabtu, 13 Juli 2024</td>
                                 </tr>
                                 <tr className='border border-white border-opacity-10'>
                                     <td className='border border-white border-opacity-10'>Pengumuman Lolos Tahap 3 | Top 3 Regional</td>

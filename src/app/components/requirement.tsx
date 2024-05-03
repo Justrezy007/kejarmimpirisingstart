@@ -20,7 +20,14 @@ const Requirement = () => {
         }
     }, [count, imageShow.length]);
     return (
-        <div className="bg-base-100 md:w-11/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
+        <div
+        className="hero md:min-h-screen h-[42rem] mx-auto overflow-y-hidden bg-cover bg-center bg-no-repeat shadow-lg" style={{
+            backgroundImage: "url('./KV3.jpg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover"
+        }}
+        >
+        <div className="md:w-11/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
 
             {isModalOfflineOpen && (
                 <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
@@ -35,6 +42,7 @@ const Requirement = () => {
                             <li className='my-2'>Lakukan registrasi ulang dan pengambilan nomor antrian audisi</li>
                             <li className='my-2'>Tunggu hingga nomor pendaftaran audisi peserta dipanggil oleh panitia</li>
                             <li className='my-2'>Waktu audisi akan berlangsung kurang lebih 5 menit, peserta dapat menggunakan instrumen musik dan atau diiringi dengan lagu Kejar Mimpimu - Dee Lestari (Minus One)</li>
+                            <li className='my-2'>Datang ke tempat audisi 30 menit sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp dan/atau Email konfirmasi.</li>
                         </ul>
                         <div className="modal-action">
                             <button className="btn bg-red-600" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>
@@ -73,7 +81,7 @@ const Requirement = () => {
                     <li className='my-1'>Berkewarganegaraan Indonesia dengan rentang usia 12 - 40 tahun</li>
                     <li className='my-1'>Peserta wajib memiliki akun OCTO Pay di OCTO Mobile dengan minimal deposit Rp10.000</li>
                     <li className='my-1'>Peserta hanya diperbolehkan untuk mengikuti kompetisi dalam satu skema SAJA (<i>offline/online</i>)</li>
-                    <li className='my-1'>Peserta yang berdomisili di kota tempat Skema <i>offline</i> dilaksanakan (Manado, Jogja, dan Jakarta), wajib mengikuti kompetisi secara <i>offline</i>. Apabila kuota kompetisi <i>offline</i> dalam domisili tersebut telah habis, maka diperbolehkan untuk melakukan kompetisi secara <i>online</i></li>
+                    <li className='my-1'>Peserta yang berdomisili di kota tempat Skema <i>offline</i> dilaksanakan (Jakarta, Manado, Yogyakarta), wajib mengikuti kompetisi secara <i>offline</i>. Apabila kuota kompetisi <i>offline</i> dalam domisili tersebut telah habis, maka diperbolehkan untuk melakukan kompetisi secara <i>online</i></li>
                 </ul>
                 <div className='mt-4 flex flex-row flex-wrap gap-5'>
                     <button className="btn px-6 bg-red-700 rounded-none border-none" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>Ketentuan Offline</button>
@@ -93,8 +101,7 @@ const Requirement = () => {
                 {/* <img src={`./Gallery_Peserta/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" /> */}
             </div>
         </div>
-
-
+    </div>
     )
 }
 
