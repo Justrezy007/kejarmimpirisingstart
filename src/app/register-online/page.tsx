@@ -210,7 +210,7 @@ const RegisterOnline = () => {
             <div className="container flex items-center justify-center flex-1 h-full mx-auto py-8">
                 <form onSubmit={handleSubmit(onSubmit)} className='bg-base-100 w-11/12 md:w-7/12 px-8 py-8'>
                     <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'} />
-                    {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3> */}
+                    {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>Kejar Mimpi Rising Start 2024</h3> */}
                     <h3 className='font-semibold text-lg mt-1 text-center text-white'>PENDAFTARAN AUDISI ONLINE</h3>
                     <div className='md:px-12 px-2 mt-8'>
                     <p className='text-sm text-white font-semibold'>Publication Confirmation</p>
@@ -304,7 +304,7 @@ const RegisterOnline = () => {
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <label className='text-xs text-opacity-50' id="city">Nomor Octo Pay</label>
+                            <label className='text-xs text-opacity-50' id="city">Nomor OCTO Pay</label>
                             {errors.nomorOcto && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                             <input {...register("nomorOcto", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='32111111111' />
                         </div>

@@ -20,8 +20,7 @@ const Requirement = () => {
         }
     }, [count, imageShow.length]);
     return (
-        <div
-        className="hero md:min-h-screen h-[42rem] mx-auto overflow-y-hidden bg-cover bg-center bg-no-repeat shadow-lg" style={{
+        <div style={{
             backgroundImage: "url('./KV3.jpg')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover"
@@ -34,7 +33,7 @@ const Requirement = () => {
                     <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
                         <h3 className="font-bold text-lg">Ketentuan Skema Offline</h3>
                         <ul className="list-disc">
-                            <li className='my-2'>Registrasikan diri peserta pada link registrasi cimb.id/RisingStart dan pilih sesuai domisili peserta</li>
+                            <li className='my-2'>Registrasikan diri peserta pada link registrasi <a href="https://cimb.id/risingstart">https://cimb.id/risingstart</a> dan pilih sesuai domisili peserta</li>
                             <li className='my-2'>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp dan atau email terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
                             <li className='my-2'>Apabila kuota audisi offline penuh, peserta dapat mendaftarkan diri pada skema online</li>
                             <li className='my-2'>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari versi Indonesia dari bagian intro hingga reff di hari audisi.</li>

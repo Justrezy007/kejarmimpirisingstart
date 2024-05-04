@@ -141,19 +141,19 @@ const Profile = () => {
                                     {city}
                                 </span>
                             </p>
-                            {linkVideo == '' ? null:
+                            {(linkVideo == '') ? null:
                             
                             <p className="flex flex-col mt-4">
                                 Link Video
                                 <span className="font-semibold text-slate-100">
-                                    {linkVideo}
+                                    {(linkVideo == '' )? '-' :linkVideo}
                                 </span>
                             </p>
                             
                             }
                         </div>
                     </div>
-                    <p className='mt-8 text-sm text-rose-500'>*Periksa Inbox e-mail Anda untuk Mendapat Detail Audisi Offline dan Bergabung dalam Grup Whatsapp Peserta</p>
+                    <p className='mt-8 text-sm text-rose-500'>*Periksa Inbox E-mail Anda untuk Mendapat Detail Audisi Offline (Periksa Folder Junk dan&#47;atau Spam Apabila Tidak Ditemukan di Inbox) dan Bergabung dalam Grup Whatsapp Peserta</p>
                     <div className='flex justify-end'>
                         {/* <button onClick={e => setEditor(!editor)} className='px-8 py-1.5 bg-red-700 mt-8'>Ubah Data</button>      */}
                         <button onClick={e=> handleSignOut(e)}className='text-white bg-red-700 px-8 py-2 mt-8 rounded'>Kembali</button>

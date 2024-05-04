@@ -10,11 +10,11 @@ const FAQ = () => {
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                        Siapa yang bisa mengikuti audisi CIMB Niaga Rising Start: Singing Competition 2024 ini?
+                        Siapa yang bisa mengikuti audisi Kejar Mimpi Rising Start: Singing Competition 2024 ini?
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                            Siapa saja yang memenuhi persyaratan sesuai domisili dengan rentang umur 12-40 tahun dapat mengikuti audisi CIMB Niaga Rising Start: Singing Competition 2024 ini tanpa dipungut biaya apapun. Pendaftar wajib untuk memiliki akun OCTO Pay dengan minimum deposit Rp10.000
+                        Siapa saja yang memenuhi persyaratan sesuai domisili dengan rentang umur 12-40 tahun dapat mengikuti audisi Kejar Mimpi Rising Start: Singing Competition 2024 ini tanpa dipungut biaya apapun. Pendaftar wajib untuk memiliki akun OCTO Pay dengan minimum deposit Rp10.000
                         </p>
                     </div>
                 </div>
@@ -93,12 +93,12 @@ const FAQ = () => {
 
                             <li className='mt-3'><strong className='text-lg'>Audisi Tahap 2 - Top 10:</strong>
                                 <ul className='list-disc ml-4'>
-                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 5 Juli 2024 - Minggu, 7 Juli 2024.</li>
+                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 12 Juli 2024 - Minggu, 14 Juli 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi melalui email dan/atau WhatsApp untuk instruksi lebih lanjut.</li>
                                     <li>Peserta wajib memiliki rekening tabungan CIMB Niaga.</li>
                                     <li>Selama audisi offline di Jakarta, peserta akan dipanggil sesuai dengan nomor urut yang telah ditentukan.</li>
                                     <li>Peserta harus menampilkan lagu &quot;Kejar Mimpimu - Dee Lestari&quot; versi bahasa Inggris dan menyiapkan tambahan satu lagu bebas.</li>
-                                    <li>Durasi audisi sekitar 7 menit, dan peserta dapat menggunakan instrumen musik atau lagu minus one dari &quot;Kejar Mimpimu - Dee Lestari&quot;.</li>
+                                    <li>Durasi audisi sekitar 7 menit dan peserta dapat menggunakan instrumen musik atau lagu minus one dari &quot;Kejar Mimpimu - Dee Lestari&quot;.</li>
                                 </ul>
                             </li>
 
@@ -106,10 +106,11 @@ const FAQ = () => {
                                 <ul className='list-disc ml-4'>
                                     <li>Audisi Tahap 3 akan diadakan di Jakarta dari Selasa, 30 Juli 2024 - Sabtu, 3 Agustus 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi untuk instruksi lebih lanjut.</li>
-                                    <li>Pada audisi tahap ini top 2 dari masing-masing negara akan dikumpulkan untuk berkompetisi kembali untuk menentukan pemenang Top 3</li>
+                                    <li>Pada audisi tahap ini, Top 2 dari masing-masing negara akan dikumpulkan untuk berkompetisi kembali dalam menentukan pemenang Top 3 regional</li>
                                     <li>Persyaratan dan prosedur audisi sama dengan Tahap 2. </li>
                                     <li>Setelah pemenang diumumkan, pemenang Top 3 akan menjalani Training Offline yang detailnya masih akan diumumkan lebih lanjut. </li>
-                                    <li>Pemenang  Top 3 akan tampil di konser &quot;Kejar Mimpi untuk Indonesia 2024&quot; bersama Andi Rianto dan penyanyi papan atas lainnya pada tanggal 24 Agustus 2024.</li>
+                                    <li>Pemenang Top 3 wajib menjalani Training Offline menuju persiapan Konser Kejar Mimpi untuk Indonesia 2024 yang detailnya akan diumumkan lebih lanjut.</li>
+                                    <li>Pemenang Top 3 akan tampil di Konser Kejar Mimpi untuk Indonesia 2024 bersama penyanyi papan atas Indonesia pada tanggal 24 Agustus 2024 di Surakarta </li>
                                 </ul>
                             </li>
                         </ul>
@@ -131,7 +132,7 @@ const FAQ = () => {
                             </thead>
                             <tbody>
                                 <tr className='border border-white border-opacity-10'>
-                                    <td className='border border-white border-opacity-10'>Pengumuman Lolos Tahap 1 | Top 10</td>
+                                    <td className='border border-white border-opacity-10'>Pengumuman Lolos Tahap 1 | Top 10 Indonesia</td>
                                     <td className='border border-white border-opacity-10'>Sabtu, 29 Juni 2024</td>
                                 </tr>
                                 <tr className='border border-white border-opacity-10'>
@@ -193,7 +194,7 @@ const FAQ = () => {
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                            Khusus peserta di luar kota Jabodetabek, pada audisi  tahap 2 dan 3 akan diberikan akomodasi oleh CIMB Niaga
+                        Setiap peserta akan diberikan akomodasi selama kegiatan berlangsung
                         </p>
                     </div>
                 </div>
@@ -217,7 +218,7 @@ const FAQ = () => {
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                            Ikuti sosial media CIMB Niaga dan apabila terdapat kendala maupun informasi lebih lanjut, dapat menghubungi Instagram @cimb_niaga dan atau @kejarmimpi.id
+                        Ikuti sosial media @cimb_niaga dan @kejarmimpi.id. Apabila terdapat kendala maupun informasi lebih lanjut, dapat menghubungi call center CIMB Niaga 14041
                         </p>
                     </div>
                 </div>

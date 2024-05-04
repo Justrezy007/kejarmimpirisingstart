@@ -32,12 +32,13 @@ const Map = () => {
       fetchData();
 },[])
   return (
-    <div className='flex relative justify-center items-center w-full mx-auto py-12 bg-base-300'>
+    
+    <div className='flex relative justify-center items-center w-full mx-auto py-12'>
       <div className='w-full h-full flex gap-5 justify-around items-center absolute top-0 left-0 px-4 md:px-32'>
         
-        <Card city={"Manado"} img={'/manado.jpeg'} quota={75} tanggal={"Sabtu, 1 Juni 2024"} data={data[1]} place={'Bumi Beringin Drinks & Eatery'} />
         <Card city={"Yogyakarta"} img={'/jogja.jpg'} quota={75} tanggal={"Sabtu, 18 Mei 2024"} data={data[2]} place={'Defreshco Coffee & Bistro'} />
         <Card city={"Jakarta"} img={'/jakarta.jpg'} quota={150} tanggal={"Sabtu, 15 Juni 2024"} data={data[0]} place={'CIMB Niaga Icon Pondok Indah'}/>
+        <Card city={"Manado"} img={'/manado.jpeg'} quota={75} tanggal={"Sabtu, 1 Juni 2024"} data={data[1]} place={'Bumi Beringin Drinks & Eatery'} />
 
       </div>
       <Image className='h-72' src={"/Map.svg"} alt='map' width={780} height={320} />

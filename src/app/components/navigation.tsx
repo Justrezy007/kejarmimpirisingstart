@@ -23,7 +23,7 @@ const Navigation = () => {
                     </ul>
                 </div>
                 <a className="">
-                    <img className='md:w-36 w-28' src={'/cimb_niaga.png'} />
+                    <img className='md:w-48 w-28' src={'/Logo_1.png'} />
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">

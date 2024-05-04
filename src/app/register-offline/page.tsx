@@ -107,7 +107,7 @@ const RegisterOffline = () => {
     }
 
     // Send Email to user
-    const sendEmail = (city: string, receiver: string, lokasi: string, map: string, date: string, time: string, hastag: string) => {
+    const sendEmail = (city: string, receiver: string, lokasi: string, map: string, date: string, time: string, hastag: string, whatsapp:string) => {
 
         const email_params = {
             city: city,
@@ -145,9 +145,9 @@ const RegisterOffline = () => {
                 if (res?.user) {
                     const createUser = await createUserToFirestore(res?.user.uid, data, timeStamp);
                     sessionStorage.setItem('user', res?.user.uid);
-                    if(data.city == 'manado') sendEmail(data.city,data.email,'Bumi Beringin Resto Jl. Brigjend Katamso Lrg. Lingkungan 5, Bumi Beringin, Kec. Wenang, Kota Manado, Sulawesi Utara', 'https://g.co/kgs/xAj7FcQ', 'Sabtu, 18 April 2024','08.00 - 17.00 WITA','#RisingStartManado')
-                    if(data.city == 'jogja') sendEmail(data.city,data.email,'De Freshco Resto Jl. Magelang, Rogoyudan, Sinduadi, Mlati, Sleman, Yogyakarta', 'https://maps.app.goo.gl/HmwthN3Uo1wxgDDT8', 'Sabtu, 1 Juni 2024','08.00 - 17.00 WIB','#RisingStartYogyakarta')
-                    if(data.city == 'jakarta') sendEmail(data.city,data.email,'CIMB Niaga Pondok Indah Icon Office Park Gedung A Unit GF 01 & 101 Sektor 3, Jl. Metro Pondok Indah, RT.1/RW.16, Pondok Indah', 'https://maps.app.goo.gl/2wnx9QY3bYrL28kF9', 'Sabtu, 15 Juni 2024','08.00 - 17.00 WIB','#RisingStartJakarta')
+                    if(data.city == 'manado') sendEmail(data.city,data.email,'Bumi Beringin Resto Jl. Brigjend Katamso Lrg. Lingkungan 5, Bumi Beringin, Kec. Wenang, Kota Manado, Sulawesi Utara', 'https://g.co/kgs/xAj7FcQ', 'Sabtu, 18 April 2024','08.00 - 17.00 WITA','#RisingStartManado','https://chat.whatsapp.com/JwBA1H8OMDnJz2VzXSuF7J')
+                    if(data.city == 'jogja') sendEmail(data.city,data.email,'De Freshco Resto Jl. Magelang, Rogoyudan, Sinduadi, Mlati, Sleman, Yogyakarta', 'https://maps.app.goo.gl/HmwthN3Uo1wxgDDT8', 'Sabtu, 1 Juni 2024','08.00 - 17.00 WIB','#RisingStartYogyakarta','https://chat.whatsapp.com/Bl1O1JUe38u3beo2rVOLOB')
+                    if(data.city == 'jakarta') sendEmail(data.city,data.email,'CIMB Niaga Pondok Indah Icon Office Park Gedung A Unit GF 01 & 101 Sektor 3, Jl. Metro Pondok Indah, RT.1/RW.16, Pondok Indah', 'https://maps.app.goo.gl/2wnx9QY3bYrL28kF9', 'Sabtu, 15 Juni 2024','08.00 - 17.00 WIB','#RisingStartJakarta','https://chat.whatsapp.com/EHKhdXfNElN7v5wJmihIai') // Link whatsapp belum
                     router.push('/profile')
                 } else {
                     setIsLoading(false)
@@ -213,7 +213,7 @@ const RegisterOffline = () => {
             <div className="container flex items-center justify-center flex-1 h-full mx-auto py-8">
                 <form onSubmit={handleSubmit(onSubmit)} className='bg-base-100 w-11/12 md:w-7/12 px-8 py-8'>
                     <img className='font-semibold text-lg w-32' src={'cimb_niaga.png'} />
-                    {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>CIMB Niaga Rising Start 2024</h3> */}
+                    {/* <h3 className='font-semibold text-2xl md:mt-3 my-3 text-center text-white'>Kejar Mimpi Rising Start 2024</h3> */}
                     <h3 className='font-semibold text-lg mt-1 text-center text-white'>PENDAFTARAN AUDISI OFFLINE</h3>
                     <div className='md:px-12 px-2 mt-8'>
                         <p className='text-sm text-white font-semibold'>Publication Confirmation</p>
@@ -296,7 +296,7 @@ const RegisterOffline = () => {
                         </div>
 
                         <div className='flex flex-col mt-6 flex-1'>
-                            <label className='text-xs text-opacity-50' id="city">Nomor Octo Pay</label>
+                            <label className='text-xs text-opacity-50' id="city">Nomor OCTO Pay</label>
                             {errors.nomorOcto && <p className='text-xs text-red-500'>Required 3-20 characters</p>}
                             <input {...register("nomorOcto", { required: true, minLength: 3, maxLength: 20 })} className='px-3 py-2 bg-white text-md text-slate-800 border-none mt-1' type='text' placeholder='32111111111' />
                         </div>
