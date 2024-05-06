@@ -116,7 +116,8 @@ const RegisterOffline = () => {
             map: map,
             date: date,
             time: time,
-            hastag: hastag,        }
+            hastag: hastag,
+            whatsapp: whatsapp        }
 
         emailjs
             .send(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID ?? "",

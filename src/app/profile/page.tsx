@@ -23,6 +23,7 @@ const Profile = () => {
     const [octopay, setOctopay] = useState('')
     const [linkVideo, setLinkVideo] = useState('')
     const [type, setType] = useState('')
+    const [profilePict, setProfilePict] = useState('') 
 
     const [user] = useAuthState(auth)
     const router = useRouter()
@@ -63,6 +64,7 @@ const Profile = () => {
             setCity(userData?.data()?.city)
             setKTP(userData?.data()?.nomorKtp)
             setType(userData?.data()?.type)
+            setProfilePict(userData?.data()?.profilePict)
         }
     },[user, userSession, userData])
     
@@ -73,7 +75,11 @@ const Profile = () => {
             <img alt="profil" src="/BGProfile.jpg" className="w-full mb-4 object-cover rounded-t-lg h-80" />
             <div className="flex flex-col items-center justify-center p-4 -mt-24">
                 <div className="relative block">
+                    {profilePict == '' ? 
                     <img alt="profil" src="/avatar_boy.png" className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white" />
+                    :
+                    <img alt="profil" src={profilePict} className="mx-auto object-cover rounded-full h-36 w-36  border-2 border-white" />
+                    }
                 </div>
                 <p className="mt-2 text-xl font-medium text-slate-100">
                     {fullName}
@@ -153,7 +159,7 @@ const Profile = () => {
                             } */}
                         </div>
                     </div>
-                    <p className='mt-8 text-sm text-rose-500'>*Periksa Inbox E-mail Anda untuk Mendapat Detail Audisi Offline (Periksa Folder Junk dan&#47;atau Spam Apabila Tidak Ditemukan di Inbox) dan Bergabung dalam Grup Whatsapp Peserta</p>
+                    <p className='mt-8 text-sm text-rose-500 px-6 py-6 rounded-lg border-rose-500 border'>*Periksa Inbox E-mail Anda untuk Mendapat Detail Audisi Offline (Periksa Folder Junk dan&#47;atau Spam Apabila Tidak Ditemukan di Inbox) dan Bergabung dalam Grup Whatsapp Peserta</p>
                     <div className='flex justify-end'>
                         {/* <button onClick={e => setEditor(!editor)} className='px-8 py-1.5 bg-red-700 mt-8'>Ubah Data</button>      */}
                         <button onClick={e=> handleSignOut(e)}className='text-white bg-red-700 px-8 py-2 mt-8 rounded'>Kembali</button>

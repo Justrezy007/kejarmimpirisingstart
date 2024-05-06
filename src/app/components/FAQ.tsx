@@ -29,7 +29,7 @@ const FAQ = () => {
                             <li>Pilih Open Account Now</li>
                             <li>Pilih produk OCTO Pay</li>
                             <li>Menyetujui Syarat dan Ketentuan</li>
-                            <li>Melengkapi informasi pribadi (Nama lengkap, tanggal lahir, nomor ponsel dan alamat email) dan membuat User ID OCTO Mobile, PIN OCTO Mobile dan kode registrasi (Jika ada)</li>
+                            <li>Melengkapi informasi pribadi (nama lengkap, tanggal lahir, nomor ponsel dan alamat email) dan membuat user id octo mobile, pin octo mobile dan kode registrasi (jika ada)</li>
                             <li>Memasukan passcode yang telah dikirimkan ke nomor ponsel</li>
                             <li>Pendaftaran OCTO Pay berhasil! Nomor akun akan ditampilkan sesuai dengan nomor ponsel yang terdaftar</li>
                         </ul>
