@@ -25,11 +25,11 @@ const FAQ = () => {
                     </div>
                     <div className="collapse-content text-gray-400">
                         <ul className='list-disc ml-4'>
-                            <li>Download aplikasi OCTO Mobile di Play Store / App Store</li>
-                            <li>Pilih Open Account Now</li>
-                            <li>Pilih produk OCTO Pay</li>
-                            <li>Menyetujui Syarat dan Ketentuan</li>
-                            <li>Melengkapi informasi pribadi (nama lengkap, tanggal lahir, nomor ponsel dan alamat email) dan membuat user id octo mobile, pin octo mobile dan kode registrasi (jika ada)</li>
+                            <li>Download aplikasi OCTO Mobile di Play Store / App Store </li>
+                            <li>Pilih &apos;Open Account Now&apos;</li>
+                            <li>Pilih produk &apos;OCTO Pay&apos;</li>
+                            <li>Menyetujui &apos;Syarat dan Ketentuan&apos;</li>
+                            <li>Melengkapi informasi pribadi (nama lengkap, tanggal lahir, nomor ponsel, dan alamat email) dan membuat User ID OCTO Mobile, PIN OCTO Mobile, dan kode registrasi (jika ada) </li>
                             <li>Memasukan passcode yang telah dikirimkan ke nomor ponsel</li>
                             <li>Pendaftaran OCTO Pay berhasil! Nomor akun akan ditampilkan sesuai dengan nomor ponsel yang terdaftar</li>
                         </ul>
@@ -45,13 +45,13 @@ const FAQ = () => {
                         Peserta akan menyanyikan lagu Kejar Mimpimu - Dee Lestari sesuai dengan syarat & ketentuan untuk audisi online maupun offline<br />
                         </p>
                         <p className="text-base leading-6 mt-2">
-                            Informasi Tambahan
+                            Informasi Tambahan:
                         </p>
                         <ul className='list-disc ml-4'>
                             <li>Dilarang untuk melakukan gratifikasi</li>
                             <li>Apabila tidak memenuhi setiap ketentuan yang ada, maka peserta akan otomatis diskualifikasi</li>
-                            <li>Wajib menggunakan pakaian rapi (semi formal) saat melakukan audisi</li>
-                            <li>Dilarang menampilkan hal sensitif yang mengandung unsur SARA</li>
+                            <li>Wajib menggunakan pakaian rapi (semi-formal) saat melakukan audisi</li>
+                            <li>Dilarang menampilkan hal sensitif, terutama yang mengandung unsur SARA</li>
                         </ul>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const FAQ = () => {
                             <li className='mt-3'><strong className='text-lg'>Audisi Tahap 1</strong>
                                 <ul>
                                     <li className='mt-3'><strong className='font-semibold'>Audisi Online:</strong></li>
-                                    <p>Registrasi &amp; Audisi berlangsung dari Senin, 6 Mei 2024 - Kamis, 20 Juni 2024.</p>
+                                    <p>Registrasi &amp; Audisi berlangsung pada Senin, 6 Mei 2024 - Kamis, 20 Juni 2024.</p>
                                     <li className='mt-3'><strong className='font-semibold'>Audisi Offline:</strong>
                                         <ul className='list-disc ml-4'>
                                             <li>Yogyakarta:
@@ -93,7 +93,7 @@ const FAQ = () => {
 
                             <li className='mt-3'><strong className='text-lg'>Audisi Tahap 2 - Top 10:</strong>
                                 <ul className='list-disc ml-4'>
-                                    <li>Audisi Tahap 2 dilakukan di Jakarta dari Jumat, 12 Juli 2024 - Minggu, 14 Juli 2024.</li>
+                                    <li>Audisi Tahap 2 dilakukan di Jakarta pada Jumat, 12 Juli 2024 - Minggu, 14 Juli 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi melalui email dan/atau WhatsApp untuk instruksi lebih lanjut.</li>
                                     <li>Peserta wajib memiliki rekening tabungan CIMB Niaga.</li>
                                     <li>Selama audisi offline di Jakarta, peserta akan dipanggil sesuai dengan nomor urut yang telah ditentukan.</li>
@@ -104,13 +104,13 @@ const FAQ = () => {
 
                             <li className='mt-3'><strong className='text-lg'>Audisi Tahap 3 - Top Regional:</strong>
                                 <ul className='list-disc ml-4'>
-                                    <li>Audisi Tahap 3 akan diadakan di Jakarta dari Selasa, 30 Juli 2024 - Sabtu, 3 Agustus 2024.</li>
+                                    <li>Audisi Tahap 3 akan diadakan di Jakarta pada Selasa, 30 Juli 2024 - Sabtu, 3 Agustus 2024.</li>
                                     <li>Peserta yang lolos ke tahap ini akan dihubungi untuk instruksi lebih lanjut.</li>
-                                    <li>Pada audisi tahap ini, Top 2 dari masing-masing negara akan dikumpulkan untuk berkompetisi kembali dalam menentukan pemenang Top 3 regional</li>
-                                    <li>Persyaratan dan prosedur audisi sama dengan Tahap 2. </li>
-                                    <li>Setelah pemenang diumumkan, pemenang Top 3 akan menjalani Training Offline yang detailnya masih akan diumumkan lebih lanjut. </li>
+                                    <li>Pada audisi tahap ini, Top 2 dari masing-masing negara akan dikumpulkan untuk berkompetisi kembali dalam menentukan pemenang Top 3 Regiona.</li>
+                                    <li>Persyaratan dan prosedur audisi sama dengan Tahap 2.</li>
+                                    <li>Setelah pemenang diumumkan, pemenang Top 3 akan menjalani Training Offline yang detailnya akan diumumkan lebih lanjut.</li>
                                     <li>Pemenang Top 3 wajib menjalani Training Offline menuju persiapan Konser Kejar Mimpi untuk Indonesia 2024 yang detailnya akan diumumkan lebih lanjut.</li>
-                                    <li>Pemenang Top 3 akan tampil di Konser Kejar Mimpi untuk Indonesia 2024 bersama penyanyi papan atas Indonesia pada tanggal 24 Agustus 2024 di Surakarta </li>
+                                    <li>Pemenang Top 3 akan tampil di Konser Kejar Mimpi untuk Indonesia 2024 bersama penyanyi papan atas Indonesia pada tanggal 24 Agustus 2024 di Surakarta.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -218,7 +218,7 @@ const FAQ = () => {
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                        Ikuti sosial media @cimb_niaga dan @kejarmimpi.id. Apabila terdapat kendala maupun informasi lebih lanjut, dapat menghubungi call center CIMB Niaga 14041
+                        Ikuti sosial media <a href="https://www.instagram.com/cimb_niaga/">@cimb_niaga</a> dan <a href="https://www.instagram.com/kejarmimpi.id/">@kejarmimpi.id</a>. Apabila terdapat kendala maupun informasi lebih lanjut, dapat menghubungi call center CIMB Niaga 14041
                         </p>
                     </div>
                 </div>
