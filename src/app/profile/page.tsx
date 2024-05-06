@@ -110,7 +110,7 @@ const Profile = () => {
                                 </span>
                             </p>
                             <p className="flex flex-col mt-4">
-                                Nomor Octopay
+                                Nomor OCTO Pay
                                 <span className="font-semibold text-slate-100">
                                     {octopay}
                                 </span>
@@ -141,7 +141,7 @@ const Profile = () => {
                                     {city}
                                 </span>
                             </p>
-                            {(linkVideo == '') ? null:
+                            {/* {(linkVideo == '') ? null:
                             
                             <p className="flex flex-col mt-4">
                                 Link Video
@@ -150,7 +150,7 @@ const Profile = () => {
                                 </span>
                             </p>
                             
-                            }
+                            } */}
                         </div>
                     </div>
                     <p className='mt-8 text-sm text-rose-500'>*Periksa Inbox E-mail Anda untuk Mendapat Detail Audisi Offline (Periksa Folder Junk dan&#47;atau Spam Apabila Tidak Ditemukan di Inbox) dan Bergabung dalam Grup Whatsapp Peserta</p>

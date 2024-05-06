@@ -68,7 +68,7 @@ const FAQ = () => {
                                     <p>Registrasi &amp; Audisi berlangsung dari Senin, 6 Mei 2024 - Kamis, 20 Juni 2024.</p>
                                     <li className='mt-3'><strong className='font-semibold'>Audisi Offline:</strong>
                                         <ul className='list-disc ml-4'>
-                                            <li>Yogjakarta:
+                                            <li>Yogyakarta:
                                                 <ul>
                                                     <li>Registrasi: Senin, 6 Mei 2024 - Selasa, 14 Mei 2024</li>
                                                     <li>Audisi: Sabtu, 18 Mei 2024</li>

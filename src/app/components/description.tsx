@@ -19,13 +19,6 @@ const Description = () => {
     }, [count, imageShow.length]);
 
     return (
-
-        <div style={{
-            backgroundImage: "url('./KV2.jpg')",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
-        }}
-        >
             <div
                 id="event" className="w-full md:w-10/12 flex flex-col md:flex-row mx-auto pt-28 overflow-hidden relative lg:items-center">
                 <div className="flex-1 md:order-1 order-2 py-12 px-8 md:px-2 lg:py-16 z-20">
@@ -48,7 +41,6 @@ const Description = () => {
                     <img src={`./Gallery_Judges/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.2)]" alt="Tree" />
                 </div>
             </div>
-        </div>
 
     )
 }

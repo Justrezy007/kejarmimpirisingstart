@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="mx-auto max-w-5xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-neutral-content">
                 <a className="btn btn-ghost text-xl">
-                    <img className='w-48' src={'/Logo_2.png'} />
+                    <img className='w-80' src={'/Logo_3.png'} />
                 </a>
                 </div>
                 <div className='text-gray-900 mx-auto text-center mt-6'>
@@ -90,8 +90,9 @@ const Footer = () => {
 
                 </ul>
             </div>
-            <div className=''>
-                <p className='text-center text-xs py-2'>PT Bank CIMB Niaga Tbk berizin &amp; diawasi oleh Otoritas Jasa Keuangan &amp; Bank Indonesia serta merupakan Peserta Penjaminan LPS</p>
+            <div className='flex justify-center'>
+                <img src={'/OJK.png'} />
+                {/* <p className='text-center text-xs py-2'>PT Bank CIMB Niaga Tbk berizin &amp; diawasi oleh Otoritas Jasa Keuangan &amp; Bank Indonesia serta merupakan Peserta Penjaminan LPS</p> */}
             </div>
         </footer>
     )

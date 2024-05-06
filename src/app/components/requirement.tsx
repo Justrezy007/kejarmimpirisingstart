@@ -20,12 +20,6 @@ const Requirement = () => {
         }
     }, [count, imageShow.length]);
     return (
-        <div style={{
-            backgroundImage: "url('./KV3.jpg')",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
-        }}
-        >
         <div className="md:w-11/12 w-full mx-auto overflow-hidden relative flex md:flex-row flex-col lg:items-center">
 
             {isModalOfflineOpen && (
@@ -33,15 +27,14 @@ const Requirement = () => {
                     <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
                         <h3 className="font-bold text-lg">Ketentuan Skema Offline</h3>
                         <ul className="list-disc">
-                            <li className='my-2'>Registrasikan diri peserta pada link registrasi <a href="https://cimb.id/risingstart">https://cimb.id/risingstart</a> dan pilih sesuai domisili peserta</li>
+                            <li className='my-2'>Registrasikan diri peserta pada link registrasi <a href="https://cimb.id/risingstart">cimb.id/risingstart</a> dan pilih sesuai domisili peserta</li>
                             <li className='my-2'>Dalam waktu maksimal 2x24 jam, kami akan mengirimkan pesan Whatsapp dan atau email terkait informasi lebih detail beserta konfirmasi jadwal audisi di kota domisili yang peserta pilih.</li>
                             <li className='my-2'>Apabila kuota audisi offline penuh, peserta dapat mendaftarkan diri pada skema online</li>
                             <li className='my-2'>Persiapkan diri peserta dalam menyanyikan lagu Kejar Mimpimu - Dee Lestari versi Indonesia dari bagian intro hingga reff di hari audisi.</li>
-                            <li className='my-2'>Datang ke tempat audisi 1 jam sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp dan atau Email konfirmasi.</li>
+                            <li className='my-2'>Datang ke tempat audisi 30 menit sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp dan/atau Email konfirmasi.</li>
                             <li className='my-2'>Lakukan registrasi ulang dan pengambilan nomor antrian audisi</li>
                             <li className='my-2'>Tunggu hingga nomor pendaftaran audisi peserta dipanggil oleh panitia</li>
                             <li className='my-2'>Waktu audisi akan berlangsung kurang lebih 5 menit, peserta dapat menggunakan instrumen musik dan atau diiringi dengan lagu Kejar Mimpimu - Dee Lestari (Minus One)</li>
-                            <li className='my-2'>Datang ke tempat audisi 30 menit sebelumnya dari jadwal yang terlampir dalam pesan Whatsapp dan/atau Email konfirmasi.</li>
                         </ul>
                         <div className="modal-action">
                             <button className="btn bg-red-600" onClick={() => setModalOfflineOpen(!isModalOfflineOpen)}>
@@ -100,7 +93,6 @@ const Requirement = () => {
                 {/* <img src={`./Gallery_Peserta/${imageShow[count]}`} className="w-96 rounded-lg drop-shadow-[0_20px_50px_rgba(255,_255,_255,_0.2)]" alt="Tree" /> */}
             </div>
         </div>
-    </div>
     )
 }
 

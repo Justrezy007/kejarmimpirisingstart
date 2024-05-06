@@ -88,7 +88,7 @@ const Prize = () => {
                     <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>Top 2 Indonesia</p></td>
                     <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
-                      <p className='text-gray-900 whitespace-no-wrap'>Rp10.00.000</p><p className='text-xs text-gray-900'>*untuk Masing-masing pemenang</p></td>
+                      <p className='text-gray-900 whitespace-no-wrap'>Rp10.000.000</p><p className='text-xs text-gray-900'>*untuk Masing-masing pemenang</p></td>
                     <td className='px-5 py-5 text-sm border bg-slate-100 border-b border-gray-200 text-center'>
                       <p className='text-gray-900 whitespace-no-wrap'>
                     </p></td>
