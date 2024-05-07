@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="night">
       <body className={inter.className}>
+        
         <Navigation />
         {children}
         <Footer/>
+        
       </body>
     </html>
   );
