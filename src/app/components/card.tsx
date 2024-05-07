@@ -12,7 +12,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ city, img, quota, tanggal, data, place}) => {
     return (
-        <div className="md:w-56 w-32 bg-base-100 bg-opacity-80 backdrop-blur flex flex-col md:p-8 py-5 border border-neutral border-opacity-50">
+        <div className="w-56 bg-base-100 bg-opacity-80 backdrop-blur flex flex-col md:p-8 md:py-5 pt-5 border border-neutral md:border-opacity-50">
             <img className='border border-neutral border-opacity-60 rounded-full md:w-36 md:h-36 h-12 w-12 text-center mx-auto object-cover' src={img} alt="Shoes" />
             <h2 className='text-center font-semibold md:text-2xl text-xl mt-2'>{city}</h2>
             <p className='text-center font-semibold text-md mt-4'>{tanggal}</p>

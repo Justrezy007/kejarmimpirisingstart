@@ -9,7 +9,7 @@ const FAQ = () => {
                 </h2>
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Siapa yang bisa mengikuti audisi Kejar Mimpi Rising Start: Singing Competition 2024 ini?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -20,7 +20,7 @@ const FAQ = () => {
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Bagaimana cara untuk membuka akun OCTO Pay di OCTO Mobile?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -37,7 +37,7 @@ const FAQ = () => {
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Apa yang harus dilakukan saat audisi online dan offline?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -57,7 +57,7 @@ const FAQ = () => {
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Bagaimana timeline dan ketentuan lebih lanjut dari tahap audisi?
                     </div>
                     <div className="collapse-content text-gray-400 leading-6">
@@ -119,7 +119,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Kapan pengumuman hasil audisi?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -150,7 +150,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Bagaimana aspek penilaian dari audisi ini?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -189,7 +189,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Apakah peserta yang lolos ke tahap 2 dan 3 akan diberikan akomodasi oleh CIMB Niaga?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -201,7 +201,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Di mana Konser Kejar Mimpi untuk Indonesia 2024 akan dilaksanakan?
                     </div>
                     <div className="collapse-content text-gray-400">
@@ -213,7 +213,7 @@ const FAQ = () => {
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium">
+                    <div className="collapse-title text-lg md:text-xl font-medium">
                         Bagaimana saya dapat mendapatkan informasi terupdate terkait program ini?
                     </div>
                     <div className="collapse-content text-gray-400">

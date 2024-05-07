@@ -24,7 +24,7 @@ const Requirement = () => {
 
             {isModalOfflineOpen && (
                 <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
-                    <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
+                    <div className="md:w-7/12 h-full md:h-auto overflow-auto bg-base-100 rounded-lg px-7 md:px-14 py-8">
                         <h3 className="font-bold text-lg">Ketentuan Skema Offline</h3>
                         <ul className="list-disc">
                             <li className='my-2'>Registrasikan diri peserta pada link registrasi <a href="https://cimb.id/risingstart">cimb.id/risingstart</a> dan pilih sesuai domisili peserta.</li>
@@ -46,7 +46,7 @@ const Requirement = () => {
             )}
             {isModalOnlineOpen && (
                 <div className="w-screen h-screen fixed bg-black bg-opacity-50 flex justify-center items-center top-0 left-0 z-50" id="my_modal_1">
-                    <div className="w-7/12 bg-base-100 rounded-lg px-14 py-8">
+                    <div className="md:w-7/12 h-full md:h-auto bg-base-100 rounded-lg px-6 md:px-14 py-8">
                         <h3 className="font-bold text-lg mt-6">Ketentuan Skema Online</h3>
                         <ul className="list-disc">
                             <li className='my-2'>Peserta menyanyikan lagu Kejar Mimpimu - Dee Lestari versi Indonesia dan mempublikasikannya ke akun Instagram atau TikTok pribadi dengan format video yang dibebaskan.</li>
@@ -62,8 +62,8 @@ const Requirement = () => {
                     </div>
                 </div>
             )}
-            <div className="flex-1 order-2 py-12 px-8 md:px-4 sm:px-6 lg:py-20 lg:px-2 lg:pr-16 z-20">
-                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <div className="flex-1 order-2 md:py-12 px-8 md:px-4 sm:px-6 lg:py-20 lg:px-2 lg:pr-16 z-20">
+                <h2 className="md:text-3xl text-3xl font-extrabold text-white sm:text-4xl">
                     <span className="block">Syarat & Ketentuan Peserta</span>
                 </h2>
                 <p className="text-lg font-bold mt-4 text-neutral-100">
