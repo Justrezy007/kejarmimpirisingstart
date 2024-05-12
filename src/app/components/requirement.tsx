@@ -6,7 +6,7 @@ const Requirement = () => {
     const [isModalOnlineOpen, setModalOnlineOpen] = useState(false);
     const [count, setCount] = useState<number>(0)
 
-    const imageShow = ["DSC05974.JPG", "DSC06168.JPG", "DSC06353.JPG", "DSC06274.JPG", "DSC06107.JPG", "DSC06254.JPG"]
+    const imageShow = ["DSC05974.jpg", "DSC06168.jpg", "DSC06353.jpg", "DSC06274.jpg", "DSC06107.jpg", "DSC06254.jpg"]
 
     useEffect(() => {
         if (count < imageShow.length) {
