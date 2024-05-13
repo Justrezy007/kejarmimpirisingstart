@@ -184,6 +184,7 @@ const FAQ = () => {
                             </tr>
                             </tbody>
                         </table>
+                        <p className='mt-4 text-xs '>&#8364;Keputusan juri  final dan tidak dapat diganggu gugat</p>
                     </div>
                 </div>
 
@@ -194,7 +195,7 @@ const FAQ = () => {
                     </div>
                     <div className="collapse-content text-gray-400">
                         <p>
-                        Setiap peserta akan diberikan akomodasi selama kegiatan berlangsung
+                        Setiap peserta akan diberikan akomodasi selama kegiatan berlangsung, meliputi transportasi keberangkatan menuju Jakarta, kepulangan menuju kota asal peserta, dan penginapan selama aktivitas penjurian berlangsung.
                         </p>
                     </div>
                 </div>
