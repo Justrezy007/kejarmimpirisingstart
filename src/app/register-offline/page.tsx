@@ -146,9 +146,9 @@ const RegisterOffline = () => {
                 if (res?.user) {
                     const createUser = await createUserToFirestore(res?.user.uid, data, timeStamp);
                     sessionStorage.setItem('user', res?.user.uid);
-                    if(data.city == 'manado') sendEmail(data.city,data.email,'Bumi Beringin Resto Jl. Brigjend Katamso Lrg. Lingkungan 5, Bumi Beringin, Kec. Wenang, Kota Manado, Sulawesi Utara', 'https://g.co/kgs/xAj7FcQ', 'Sabtu, 18 April 2024','08.00 - 17.00 WITA','#RisingStartManado','https://chat.whatsapp.com/JwBA1H8OMDnJz2VzXSuF7J')
-                    if(data.city == 'jogja') sendEmail(data.city,data.email,'De Freshco Resto Jl. Magelang, Rogoyudan, Sinduadi, Mlati, Sleman, Yogyakarta', 'https://maps.app.goo.gl/HmwthN3Uo1wxgDDT8', 'Sabtu, 1 Juni 2024','08.00 - 17.00 WIB','#RisingStartYogyakarta','https://chat.whatsapp.com/Bl1O1JUe38u3beo2rVOLOB')
-                    if(data.city == 'jakarta') sendEmail(data.city,data.email,'CIMB Niaga Pondok Indah Icon Office Park Gedung A Unit GF 01 & 101 Sektor 3, Jl. Metro Pondok Indah, RT.1/RW.16, Pondok Indah', 'https://maps.app.goo.gl/2wnx9QY3bYrL28kF9', 'Sabtu, 15 Juni 2024','08.00 - 17.00 WIB','#RisingStartJakarta','https://chat.whatsapp.com/EHKhdXfNElN7v5wJmihIai') // Link whatsapp belum
+                    if(data.city == 'manado') sendEmail(data.city,data.email,'Bumi Beringin Resto Jl. Brigjend Katamso Lrg. Lingkungan 5, Bumi Beringin, Kec. Wenang, Kota Manado, Sulawesi Utara', 'https://g.co/kgs/xAj7FcQ', 'Sabtu, 8 Juni 2024','08.00 - 17.00 WITA','#RisingStartManado','https://chat.whatsapp.com/JwBA1H8OMDnJz2VzXSuF7J')
+                    if(data.city == 'jogja') sendEmail(data.city,data.email,'De Freshco Resto Jl. Magelang, Rogoyudan, Sinduadi, Mlati, Sleman, Yogyakarta', 'https://maps.app.goo.gl/HmwthN3Uo1wxgDDT8', 'Sabtu, 18 Mei 2024','08.00 - 17.00 WIB','#RisingStartYogyakarta','https://chat.whatsapp.com/Bl1O1JUe38u3beo2rVOLOB')
+                    if(data.city == 'jakarta') sendEmail(data.city,data.email,'CIMB Niaga Pondok Indah Icon Office Park Gedung A Unit GF 01 & 101 Sektor 3, Jl. Metro Pondok Indah, RT.1/RW.16, Pondok Indah', 'https://maps.app.goo.gl/2wnx9QY3bYrL28kF9', 'Sabtu, 1 Juni 2024','08.00 - 17.00 WIB','#RisingStartJakarta','https://chat.whatsapp.com/EHKhdXfNElN7v5wJmihIai') // Link whatsapp belum
                     router.push('/profile')
                 } else {
                     setIsLoading(false)
