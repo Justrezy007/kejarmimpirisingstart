@@ -168,7 +168,7 @@ const RegisterOnline = () => {
 
     // Handle Create Doc based on UID
     const createUserToFirestore = async (uid: string, data: FormRegistration, timeStamp:string) => {
-        const { checked, fullName, tempatLahir, tanggalLahir, email, phone, instagram, city, nomorKtp, nomorOcto, getInformation, linkVideo } = data
+        const { checked, fullName, tempatLahir, tanggalLahir, email, phone, instagram, city, nomorKtp, nomorOcto, getInformation, linkVideo, tiktok } = data
         try {
             const dataCollection = collection(getFirestore(app), 'user');
             const dataDoc = doc(dataCollection, uid)
@@ -191,6 +191,7 @@ const RegisterOnline = () => {
                 verified: 'false',
                 timeStamp:timeStamp,
                 linkVideo,
+                tiktok,
                 createdAt: Timestamp.now()
             })
         }
