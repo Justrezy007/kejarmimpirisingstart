@@ -76,7 +76,7 @@ const FAQ = () => {
                                             </li>
                                             <li>Jakarta:
                                                 <ul>
-                                                    <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 25 Mei 2024</li>
+                                                    <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 28 Mei 2024</li>
                                                     <li>Audisi: Sabtu, 1 Juni 2024</li>
                                                 </ul>
                                             </li>
