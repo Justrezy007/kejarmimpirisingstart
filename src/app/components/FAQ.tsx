@@ -82,7 +82,7 @@ const FAQ = () => {
                                             </li>
                                             <li>Manado:
                                                 <ul>
-                                                    <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 1 Juni 2024</li>
+                                                    <li>Registrasi: Senin, 6 Mei 2024 - Sabtu, 5 Juni 2024</li>
                                                     <li>Audisi: Sabtu, 8 Juni 2024</li>
                                                 </ul>
                                             </li>
