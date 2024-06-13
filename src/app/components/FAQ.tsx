@@ -65,7 +65,7 @@ const FAQ = () => {
                             <li className='mt-3'><strong className='text-lg'>Audisi Tahap 1</strong>
                                 <ul>
                                     <li className='mt-3'><strong className='font-semibold'>Audisi Online:</strong></li>
-                                    <p>Registrasi &amp; Audisi berlangsung pada Senin, 6 Mei 2024 - Kamis, 20 Juni 2024.</p>
+                                    <p>Registrasi &amp; Audisi berlangsung pada Senin, 6 Mei 2024 - Kamis, 25 Juni 2024.</p>
                                     <li className='mt-3'><strong className='font-semibold'>Audisi Offline:</strong>
                                         <ul className='list-disc ml-4'>
                                             <li>Yogyakarta:
