@@ -9,7 +9,6 @@ import FAQ from "./components/FAQ";
 import Timeline from "./components/timeline";
 import Link from "next/link";
 import LiveCount from "./components/liveCount";
-
 export default function Home() {
   return (
     <main className="pt-16">
